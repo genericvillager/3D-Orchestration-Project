@@ -1,0 +1,54 @@
+{
+    "name": "Controls",
+    "maps": [
+        {
+            "name": "Room",
+            "id": "6080fbf2-68e1-49e7-88b3-07334c1391fc",
+            "actions": [
+                {
+                    "name": "EnvironmentControl",
+                    "type": "Button",
+                    "id": "e55a2c6a-3964-4ed6-a5e7-07014e379b5d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Pause Toggle",
+                    "type": "Button",
+                    "id": "f2a7e9f4-74ec-490f-86f9-1c24460f3713",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "44fbc95b-e358-4f9a-8832-0658df0605bc",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EnvironmentControl",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "439a0e49-1959-4e79-bbe5-bf473028c79f",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause Toggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

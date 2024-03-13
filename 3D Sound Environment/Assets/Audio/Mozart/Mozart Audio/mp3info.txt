@@ -1,0 +1,1 @@
+LAME encoded with options '-b 192 -m m'
