@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Samples/Meta XR Interaction SDK OVR Samples/62.0.0/Example Scenes/ComprehensiveRigExample.unity
+- path: Assets/Scenes/VR.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
