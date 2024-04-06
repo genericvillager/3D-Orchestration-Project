@@ -44,6 +44,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""2645cf52-58d9-4561-89db-eee55fdc4a6b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -61,11 +70,22 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""439a0e49-1959-4e79-bbe5-bf473028c79f"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/m"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Pause Toggle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b95acc15-43f2-4206-827f-279ed271429d"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -78,6 +98,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Room = asset.FindActionMap("Room", throwIfNotFound: true);
         m_Room_EnvironmentControl = m_Room.FindAction("EnvironmentControl", throwIfNotFound: true);
         m_Room_PauseToggle = m_Room.FindAction("Pause Toggle", throwIfNotFound: true);
+        m_Room_Interact = m_Room.FindAction("Interact", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -141,12 +162,14 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private List<IRoomActions> m_RoomActionsCallbackInterfaces = new List<IRoomActions>();
     private readonly InputAction m_Room_EnvironmentControl;
     private readonly InputAction m_Room_PauseToggle;
+    private readonly InputAction m_Room_Interact;
     public struct RoomActions
     {
         private @Controls m_Wrapper;
         public RoomActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @EnvironmentControl => m_Wrapper.m_Room_EnvironmentControl;
         public InputAction @PauseToggle => m_Wrapper.m_Room_PauseToggle;
+        public InputAction @Interact => m_Wrapper.m_Room_Interact;
         public InputActionMap Get() { return m_Wrapper.m_Room; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -162,6 +185,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @PauseToggle.started += instance.OnPauseToggle;
             @PauseToggle.performed += instance.OnPauseToggle;
             @PauseToggle.canceled += instance.OnPauseToggle;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
         }
 
         private void UnregisterCallbacks(IRoomActions instance)
@@ -172,6 +198,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @PauseToggle.started -= instance.OnPauseToggle;
             @PauseToggle.performed -= instance.OnPauseToggle;
             @PauseToggle.canceled -= instance.OnPauseToggle;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
         }
 
         public void RemoveCallbacks(IRoomActions instance)
@@ -193,5 +222,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     {
         void OnEnvironmentControl(InputAction.CallbackContext context);
         void OnPauseToggle(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
 }
