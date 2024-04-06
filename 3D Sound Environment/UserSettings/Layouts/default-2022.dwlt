@@ -145,8 +145,8 @@ MonoBehaviour:
     y: 0
     width: 363
     height: 626
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 49
+  controlID: 51
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -319,8 +319,8 @@ MonoBehaviour:
     y: 0
     width: 1100
     height: 626
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -371,7 +371,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Audio
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -379,17 +379,17 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Audio
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\seanj\Documents\GitHub\3D-Orchestration-Project\3D
     Sound Environment
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 60d10000
-    m_LastClickedID: 53600
-    m_ExpandedIDs: 00000000dcb50000deb50000e0b5000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 36}
+    m_SelectedIDs: 78d10000
+    m_LastClickedID: 53624
+    m_ExpandedIDs: 0000000028b600002ab600002cb6000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -417,7 +417,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000dcb50000deb50000e0b50000
+    m_ExpandedIDs: 0000000028b600002ab600002cb60000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -514,7 +514,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 486
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -557,23 +557,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 8ef4feff
-      m_LastClickedID: -68466
-      m_ExpandedIDs: 5ef5feffb012ffff0a34ffffa455ffff8657ffff6276ffff3879ffff087affffa499ffff52bbffff10dcffff24fbffff70730000
+      m_SelectedIDs: ea58feff
+      m_LastClickedID: -108310
+      m_ExpandedIDs: 4679feffb87dfeff887efeff449cfeff7abffeff321affff021bffff041bffff323affff6c47ffff3c48ffffd867ffffc885ffff9eb4ffff0ab5ffffb8d8ffff24fbffffdce5000084ea00004c9e0100daa00100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Clarinet
-        m_OriginalName: Clarinet
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -34504
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 6}
       m_SearchString: 
@@ -939,9 +939,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.76395, y: 1.940192, z: 11.773192}
+    m_Target: {x: -0.68789, y: 0.95111597, z: 2.6834378}
     speed: 2
-    m_Value: {x: -3.76395, y: 1.940192, z: 11.773192}
+    m_Value: {x: -0.68789, y: 0.95111597, z: 2.6834378}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -987,9 +987,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.19248793, y: 0.04255656, z: -0.0081256, w: 0.9808852}
+    m_Target: {x: -0.20000231, y: -0.01187656, z: 0.0023521932, w: -0.9802551}
     speed: 2
-    m_Value: {x: 0.19386795, y: 0.041051514, z: -0.007894408, w: 0.9801365}
+    m_Value: {x: -0.19990094, y: -0.010400718, z: 0.0020511132, w: -0.9797588}
   m_Size:
     m_Target: 0.86780417
     speed: 2
