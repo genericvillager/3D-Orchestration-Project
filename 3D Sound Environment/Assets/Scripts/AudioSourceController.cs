@@ -18,7 +18,6 @@ public class AudioSourceController : MonoBehaviour
         ARF = GetComponent<AudioReverbFilter>();
         player = GameObject.FindWithTag("Player").transform;
         laserLine = GetComponent<LineRenderer>();
-        transform.DetachChildren();
     }
 
     void Wall(float value)
