@@ -3613,6 +3613,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.054
       objectReference: {fileID: 0}
+    - target: {fileID: 4159908494676078565, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159908494676078565, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159908494676078565, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4693973021600348852, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.26

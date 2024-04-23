@@ -59,7 +59,7 @@ public class AudioSourceController : MonoBehaviour
         }
         else
         {
-            Debug.Log("hit nothing");
+            //Debug.Log("hit nothing");
         }
     }
 

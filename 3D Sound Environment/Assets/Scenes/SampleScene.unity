@@ -7624,6 +7624,34 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2045509970107421563, guid: 03ea101dcea0f2e45908b6eb5716cd4b, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045509970107421563, guid: 03ea101dcea0f2e45908b6eb5716cd4b, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045509970107421563, guid: 03ea101dcea0f2e45908b6eb5716cd4b, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2342995716227365234}
+    - target: {fileID: 2045509970107421563, guid: 03ea101dcea0f2e45908b6eb5716cd4b, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045509970107421563, guid: 03ea101dcea0f2e45908b6eb5716cd4b, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleMute
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045509970107421563, guid: 03ea101dcea0f2e45908b6eb5716cd4b, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioSourceController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045509970107421563, guid: 03ea101dcea0f2e45908b6eb5716cd4b, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2048848652377430490, guid: 03ea101dcea0f2e45908b6eb5716cd4b, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -7859,6 +7887,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 03ea101dcea0f2e45908b6eb5716cd4b, type: 3}
+--- !u!114 &2342995716227365234 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5429041904488603693, guid: 03ea101dcea0f2e45908b6eb5716cd4b, type: 3}
+  m_PrefabInstance: {fileID: 2342995716227365233}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac90e7b018ada9c4597c503cb4de68db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3032329224014474418
 PrefabInstance:
   m_ObjectHideFlags: 0
