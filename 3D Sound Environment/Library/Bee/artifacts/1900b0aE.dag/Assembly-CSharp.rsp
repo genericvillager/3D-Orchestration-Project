@@ -442,7 +442,10 @@
 "Assets/Scripts/Audio Manager.cs"
 "Assets/Scripts/AudioSourceController.cs"
 "Assets/Scripts/AudioSourceName.cs"
+"Assets/Scripts/FileLoading/File Manager.cs"
+"Assets/Scripts/FileLoading/LoadFileToAudioSource.cs"
 "Assets/Scripts/Room Manager.cs"
+"Assets/ScrollbarController.cs"
 -langversion:9.0
 
 /deterministic
