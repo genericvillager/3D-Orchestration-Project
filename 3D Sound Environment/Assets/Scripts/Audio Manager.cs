@@ -16,7 +16,7 @@ public class AudioManager : MonoBehaviour
     
     public int musicSyncTimeSamples = 0;
 
-    private bool on;
+    public bool on = false;
 
     public AudioSource mainAudioSource;
 
@@ -26,28 +26,26 @@ public class AudioManager : MonoBehaviour
         SetupControls();
         mainAudioSource = GetComponent<AudioSource>();
         mainAudioSource.mute = true;
-
-        StartCoroutine(SyncSources());
+        GetAllAudioSources();
+        ResetAll();
     }
 
     private void Update()
     {
-        if(AudioListener.pause)
-            AudioListener.pause = false;
-        
-        else if(!AudioListener.pause)
-            AudioListener.pause = true;
     }
 
-    void GetAllAudioSources()
+    public void GetAllAudioSources()
     {
         _sources = FindObjectsOfType<AudioSourceController>();
 
+        mainAudioSource.Stop();
         musicSyncTimeSamples = mainAudioSource.timeSamples;
         if(mainAudioSource.clip != _sources[0].GetComponent<AudioSource>().clip)
             mainAudioSource.clip = _sources[0].GetComponent<AudioSource>().clip;
 
         mainAudioSource.timeSamples = musicSyncTimeSamples;
+        mainAudioSource.Play();
+        mainAudioSource.loop = true;
     }
 
     void SetupControls()
@@ -69,11 +67,10 @@ public class AudioManager : MonoBehaviour
         if(!on)
             return;
         
-        GetAllAudioSources();
-        foreach (AudioSourceController source in _sources)
-        {
-            source.ToggleMute(true);
-        }
+        if(AudioListener.pause)
+            AudioListener.pause = false;
+        else
+            AudioListener.pause = true;
     }
 
     public void ToggleSoloAudioSource(AudioSource audioSource)
@@ -81,12 +78,11 @@ public class AudioManager : MonoBehaviour
         if(!on)
             return;
         
-        GetAllAudioSources();
         foreach (AudioSourceController source in _sources)
         {
             if (source.gameObject != audioSource.gameObject)
             {
-                source.ToggleMute(true);
+                source.ToggleMute();
             }
         }
         
@@ -96,11 +92,9 @@ public class AudioManager : MonoBehaviour
     {
         if(!on)
             return;
-        mainAudioSource.Stop();
+        
         mainAudioSource.timeSamples = 0;
-        mainAudioSource.Play();
         musicSyncTimeSamples = mainAudioSource.timeSamples;
-        GetAllAudioSources();
         foreach (AudioSourceController source in _sources)
         {
             source.PlayNow();
@@ -112,30 +106,30 @@ public class AudioManager : MonoBehaviour
         PlayAllFromStart();  
     }
 
+    private void ResetAll()
+    {
+        foreach (AudioSourceController source in _sources)
+        {
+            source.ResetAudioSource();
+        }
+        mainAudioSource.Stop();
+        mainAudioSource.timeSamples = 0;
+        AudioListener.pause = false;
+        musicSyncTimeSamples = 0;
+    }
+
     public void ToggleOnOff()
     {
         if (on)
         {
             on = false;
+            ResetAll();
         }
-        else
+        else if(!on)
         {
             on = true;
+            GetAllAudioSources();
+            mainAudioSource.Play();
         }
-    }
-    
-    private IEnumerator SyncSources()
-    {
-        while (true)
-        {
-            if (mainAudioSource.timeSamples != 0)
-            {
-                foreach (AudioSourceController audioSourceController in _sources)
-                {
-                    audioSourceController.SynchroniseWithMain();
-                    yield return null;
-                }
-            }
-        }    
     }
 }

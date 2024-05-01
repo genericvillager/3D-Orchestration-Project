@@ -24,22 +24,5 @@ public class ScrollbarController : MonoBehaviour
         amountOfFiles = panel.childCount;
         padMax = Mathf.RoundToInt(amountOfFiles-1 / 2)*500;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public static float Remap (float value, float from1, float to1, float from2, float to2) {
-        return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
-    }
     
-    public void Scroll(float value)
-    {
-        //int val = Mathf.RoundToInt(Remap(value,0,padMin,1,padMax))+200;
-        //print(value);
-        //print(val);
-        //panelGrid.padding.left = val;
-    }
 }

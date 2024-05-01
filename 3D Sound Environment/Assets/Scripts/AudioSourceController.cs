@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
 
 public class AudioSourceController : MonoBehaviour
 {
@@ -15,7 +16,10 @@ public class AudioSourceController : MonoBehaviour
 
     private AudioManager _audioManager;
 
-    private bool isPlaying;
+    private bool isPlaying = false;
+    
+    public TMP_Text audioName;
+    
     // Start is called before the first frame update
     void Start()
     { 
@@ -29,8 +33,10 @@ public class AudioSourceController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if(!isPlaying)
+        if (isPlaying)
+        {
             HitDetect();
+        }
     }
 
     private void HitDetect()
@@ -71,9 +77,13 @@ public class AudioSourceController : MonoBehaviour
         print(clip.name);
         AS.Stop();
         AS.clip = clip;
-        SynchroniseWithMain();
-        if(isPlaying)
+        if (isPlaying)
+        {
             AS.Play();
+            SynchroniseWithMain();
+        }
+
+        audioName.text = clip.name;
     }
 
     private void ChangeAudio(float vol = 1, float pitch = 1, float stereoPan = 0,
@@ -109,12 +119,9 @@ public class AudioSourceController : MonoBehaviour
         ARF.density = density;
     }
 
-    public void ToggleMute(bool solo = false)
+    public void ToggleMute(bool forceMute = false)
     {
-        if(AS.mute && solo)
-            return;
-
-        if (AS.mute)
+        if (AS.mute && !forceMute)
         {
             AS.mute = false;
             isPlaying = false;
@@ -126,14 +133,26 @@ public class AudioSourceController : MonoBehaviour
         }
     }
 
-    public void PlayNow()
+    public void ResetAudioSource()
     {
-        SynchroniseWithMain();
-        isPlaying = true;
-        AS.Play();
+        AS.Stop();
+        AS.mute = false;
+        isPlaying = false;
+        AS.timeSamples = 0;
     }
 
-    public void SynchroniseWithMain()
+    public void PlayNow()
+    {
+        isPlaying = true;
+        AS.Play();
+        if (AS.clip)
+        {
+            audioName.text = AS.clip.name;
+        }
+        SynchroniseWithMain();
+    }
+
+    void SynchroniseWithMain()
     {
         AS.timeSamples = _audioManager.mainAudioSource.timeSamples;
     }

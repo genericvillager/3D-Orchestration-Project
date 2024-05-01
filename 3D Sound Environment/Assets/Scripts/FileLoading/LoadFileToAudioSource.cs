@@ -10,10 +10,5 @@ public class LoadFileToAudioSource : MonoBehaviour
     {
         FM = FindObjectOfType<FileManager>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

@@ -20,7 +20,6 @@ GameObject:
   - component: {fileID: 4307052232891987545}
   - component: {fileID: 7081480012079324293}
   - component: {fileID: 882642196584409146}
-  - component: {fileID: 1739052191318102979}
   - component: {fileID: 5557466036694291722}
   m_Layer: 0
   m_Name: Audio Source
@@ -157,6 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac90e7b018ada9c4597c503cb4de68db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioName: {fileID: 5723496838178272920}
 --- !u!164 &-6261887008492982078
 AudioReverbFilter:
   m_ObjectHideFlags: 0
@@ -387,19 +387,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1739052191318102979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2103825064153764582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c87e2ec5d5a8e840a41e8eca14ae98f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioName: {fileID: 5723496838178272920}
 --- !u!114 &5557466036694291722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3947,7 +3934,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 586
+  m_VersionIndex: 589
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

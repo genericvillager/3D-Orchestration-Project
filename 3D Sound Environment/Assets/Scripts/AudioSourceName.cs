@@ -17,7 +17,6 @@ public class AudioSourceName : MonoBehaviour
 
     private void Update()
     {
-        if(_audioSource.clip != null)
-            audioName.text = _audioSource.clip.name;
+        audioName.text = _audioSource.clip.name;
     }
 }
