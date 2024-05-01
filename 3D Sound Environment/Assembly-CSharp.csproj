@@ -335,13 +335,13 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="ReportGeneratorMerged">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\PackageCache\com.unity.testtools.codecoverage@1.2.5\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\PackageCache\com.unity.visualscripting@1.9.1\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\PackageCache\com.unity.testtools.codecoverage@1.2.5\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\PackageCache\com.unity.visualscripting@1.9.1\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -719,295 +719,295 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="VoiceSDK.Dictation.Runtime">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\VoiceSDK.Dictation.Runtime.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\VoiceSDK.Dictation.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Management">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.XR.Management.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.XR.Management.dll</HintPath>
     </Reference>
     <Reference Include="Meta.VoiceSDK.Mic.Common">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.VoiceSDK.Mic.Common.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.VoiceSDK.Mic.Common.dll</HintPath>
     </Reference>
     <Reference Include="AssistantVoiceCommandCommon">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\AssistantVoiceCommandCommon.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\AssistantVoiceCommandCommon.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AI.Navigation">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
-    </Reference>
-    <Reference Include="meta.xr.mrutilitykit.editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\meta.xr.mrutilitykit.editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
     </Reference>
     <Reference Include="Meta.XR.Editor.Tags">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.XR.Editor.Tags.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.XR.Editor.Tags.dll</HintPath>
     </Reference>
-    <Reference Include="Meta.WitAi.Conduit">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.WitAi.Conduit.dll</HintPath>
+    <Reference Include="meta.xr.mrutilitykit.editor">
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\meta.xr.mrutilitykit.editor.dll</HintPath>
     </Reference>
     <Reference Include="VoiceSDK.Telemetry">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\VoiceSDK.Telemetry.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\VoiceSDK.Telemetry.dll</HintPath>
     </Reference>
-    <Reference Include="Meta.Wit.Composer.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.Wit.Composer.Editor.dll</HintPath>
+    <Reference Include="Meta.WitAi.Conduit">
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.WitAi.Conduit.dll</HintPath>
     </Reference>
     <Reference Include="VoiceSDK.Dictation.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\VoiceSDK.Dictation.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\VoiceSDK.Dictation.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.Wit.Composer.Editor">
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.Wit.Composer.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Oculus.Interaction.Samples.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Interaction.Samples.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Interaction.Samples.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
     <Reference Include="Meta.Wit.Dictation">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.Wit.Dictation.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.Wit.Dictation.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
     </Reference>
     <Reference Include="MetaXrSimulator.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\MetaXrSimulator.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\MetaXrSimulator.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Management.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.XR.Management.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.XR.Management.Editor.dll</HintPath>
     </Reference>
     <Reference Include="AssistantVoiceCommandCommon.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\AssistantVoiceCommandCommon.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\AssistantVoiceCommandCommon.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Oculus.Interaction.InterfaceSupport">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Interaction.InterfaceSupport.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Interaction.InterfaceSupport.dll</HintPath>
     </Reference>
     <Reference Include="Oculus.VR.Scripts.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.VR.Scripts.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Oculus.Interaction.OVR">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Interaction.OVR.dll</HintPath>
-    </Reference>
-    <Reference Include="Oculus.Platform.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Platform.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="meta.xr.sdk.sharedassets.editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\meta.xr.sdk.sharedassets.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.VR.Scripts.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Meta.VoiceSDK.Mic.Other">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.VoiceSDK.Mic.Other.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.VoiceSDK.Mic.Other.dll</HintPath>
     </Reference>
-    <Reference Include="Meta.WitAi.Conduit.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.WitAi.Conduit.Editor.dll</HintPath>
+    <Reference Include="Oculus.Platform.Editor">
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Platform.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="meta.xr.sdk.sharedassets.editor">
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\meta.xr.sdk.sharedassets.editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Oculus.Interaction.OVR">
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Interaction.OVR.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Oculus.Interaction.OVR.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Interaction.OVR.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Interaction.OVR.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.WitAi.Conduit.Editor">
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.WitAi.Conduit.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
     </Reference>
     <Reference Include="Meta.Voice.Samples.WitShapes">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.Voice.Samples.WitShapes.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.Voice.Samples.WitShapes.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Oculus.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.XR.Oculus.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.XR.Oculus.Editor.dll</HintPath>
     </Reference>
     <Reference Include="xr.sdk.sharedassets.runtime">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\xr.sdk.sharedassets.runtime.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\xr.sdk.sharedassets.runtime.dll</HintPath>
     </Reference>
     <Reference Include="Oculus.Interaction">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Interaction.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Interaction.dll</HintPath>
     </Reference>
     <Reference Include="Meta.XR.Editor.Callbacks">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.XR.Editor.Callbacks.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.XR.Editor.Callbacks.dll</HintPath>
     </Reference>
     <Reference Include="Meta.XR.BuildingBlocks">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.XR.BuildingBlocks.dll</HintPath>
-    </Reference>
-    <Reference Include="Oculus.VR.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.VR.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Meta.WitAi">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.WitAi.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.XR.BuildingBlocks.dll</HintPath>
     </Reference>
     <Reference Include="Meta.Voice.VSDKHub.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.Voice.VSDKHub.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.Voice.VSDKHub.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.WitAi">
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.WitAi.dll</HintPath>
+    </Reference>
+    <Reference Include="Oculus.VR.Editor">
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.VR.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Meta.WitAi.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.WitAi.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.WitAi.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Oculus.Haptics">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Haptics.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Haptics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Meta.XR.Audio.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.XR.Audio.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.XR.Audio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="VoiceSDK.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\VoiceSDK.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Meta.Wit.Composer">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.Wit.Composer.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\VoiceSDK.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.Wit.Composer">
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.Wit.Composer.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.ProBuilder.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.ProBuilder.dll</HintPath>
     </Reference>
     <Reference Include="Meta.WitAi.TTS.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.WitAi.TTS.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.WitAi.TTS.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
     </Reference>
     <Reference Include="meta.xr.mrutilitykit">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\meta.xr.mrutilitykit.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\meta.xr.mrutilitykit.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.SpatialTracking">
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Core.Editor">
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="VoiceSDK.Editor.Composer">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\VoiceSDK.Editor.Composer.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\VoiceSDK.Editor.Composer.dll</HintPath>
     </Reference>
     <Reference Include="Meta.WitAi.Lib">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.WitAi.Lib.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="VoiceSDK.Runtime.Composer">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\VoiceSDK.Runtime.Composer.dll</HintPath>
-    </Reference>
-    <Reference Include="Oculus.Platform">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Platform.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.WitAi.Lib.dll</HintPath>
     </Reference>
     <Reference Include="Meta.Voice.Hub.Runtime">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.Voice.Hub.Runtime.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.Voice.Hub.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="VoiceSDK.Runtime.Composer">
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\VoiceSDK.Runtime.Composer.dll</HintPath>
+    </Reference>
+    <Reference Include="Oculus.Platform">
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow.Editor">
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Meta.Voice.Hub.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.Voice.Hub.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.Voice.Hub.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InputSystem">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProBuilder.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InputSystem.ForUI">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.InputSystem.ForUI.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.InputSystem.ForUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.Editor">
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Oculus">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.XR.Oculus.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.XR.Oculus.dll</HintPath>
     </Reference>
     <Reference Include="Meta.VoiceSDK.Mic.WebGL">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.VoiceSDK.Mic.WebGL.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.VoiceSDK.Mic.WebGL.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Oculus.Interaction.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Interaction.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Interaction.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AI.Navigation.Updater">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
     </Reference>
     <Reference Include="Meta.XR.Audio">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.XR.Audio.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.XR.Audio.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Meta.XR.BuildingBlocks.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.XR.BuildingBlocks.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.XR.BuildingBlocks.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Meta.WitAI.Lib.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.WitAI.Lib.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.WitAI.Lib.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Oculus.Interaction.OVR.Samples">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Interaction.OVR.Samples.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Interaction.OVR.Samples.dll</HintPath>
     </Reference>
     <Reference Include="Meta.Voice.Samples.WitResponseDebugger">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.Voice.Samples.WitResponseDebugger.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.Voice.Samples.WitResponseDebugger.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Meta.WitAi.TTS">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.WitAi.TTS.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.WitAi.TTS.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AI.Navigation.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Oculus.Haptics.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Haptics.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+    </Reference>
+    <Reference Include="Oculus.Haptics.Editor">
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.Haptics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Oculus.VR">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.VR.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Oculus.VR.dll</HintPath>
     </Reference>
     <Reference Include="Meta.Wit.Dictation.Editor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.Wit.Dictation.Editor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.Wit.Dictation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="VoiceSDK.Runtime">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\VoiceSDK.Runtime.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\VoiceSDK.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="AssistantCoreSDKRuntime">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\AssistantCoreSDKRuntime.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\AssistantCoreSDKRuntime.dll</HintPath>
     </Reference>
     <Reference Include="AssistantCoreSDKEditor">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\AssistantCoreSDKEditor.dll</HintPath>
+      <HintPath>F:\Game Design\Unity projects\3D ORCHESTRATION PROJECT\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\AssistantCoreSDKEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
