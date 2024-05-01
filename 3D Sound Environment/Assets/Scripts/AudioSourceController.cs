@@ -13,6 +13,8 @@ public class AudioSourceController : MonoBehaviour
 
     private AudioReverbFilter ARF;
 
+    private AudioManager _audioManager;
+
     private bool isPlaying;
     // Start is called before the first frame update
     void Start()
@@ -21,27 +23,24 @@ public class AudioSourceController : MonoBehaviour
         ARF = GetComponent<AudioReverbFilter>();
         player = GameObject.FindWithTag("Player").transform;
         laserLine = GetComponent<LineRenderer>();
+        _audioManager = FindObjectOfType<AudioManager>();
     }
-
-    void Wall(float value)
-    {
-        ARF.reverbDelay = value;
-    }
+    
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if(!isPlaying)
             HitDetect();
     }
 
-    void HitDetect()
+    private void HitDetect()
     {
         RaycastHit hit;
         Vector3 direction = (player.transform.position - transform.position).normalized;
         // Does the ray intersect any objects excluding the player layer
         if (Physics.Raycast(transform.position, direction, out hit, AS.maxDistance))
         {
-            Debug.DrawRay(transform.position, direction, Color.green);
+            //Debug.DrawRay(transform.position, direction, Color.green);
             switch (hit.transform.tag)
             {
                 case "Player":
@@ -62,7 +61,7 @@ public class AudioSourceController : MonoBehaviour
         }
         else
         {
-            Debug.DrawRay(transform.position, direction, Color.yellow);
+            //Debug.DrawRay(transform.position, direction, Color.yellow);
         }
         
     }
@@ -72,11 +71,12 @@ public class AudioSourceController : MonoBehaviour
         print(clip.name);
         AS.Stop();
         AS.clip = clip;
+        SynchroniseWithMain();
         if(isPlaying)
             AS.Play();
     }
 
-    public void ChangeAudio(float vol = 1, float pitch = 1, float stereoPan = 0,
+    private void ChangeAudio(float vol = 1, float pitch = 1, float stereoPan = 0,
         float spatialBlend = 1, float reverbZoneMix = 1, float dopplerLevel = 1,
         float spread = 0, float dryLevel = 0, float room = 0,
         float roomHF = 0, float roomLF = 0, float decayTime = 1,
@@ -109,17 +109,32 @@ public class AudioSourceController : MonoBehaviour
         ARF.density = density;
     }
 
-    public void ToggleMute()
+    public void ToggleMute(bool solo = false)
     {
+        if(AS.mute && solo)
+            return;
+
         if (AS.mute)
+        {
             AS.mute = false;
+            isPlaying = false;
+        }
         else
+        {
             AS.mute = true;
+            isPlaying = true;
+        }
     }
 
     public void PlayNow()
     {
+        SynchroniseWithMain();
         isPlaying = true;
         AS.Play();
+    }
+
+    public void SynchroniseWithMain()
+    {
+        AS.timeSamples = _audioManager.mainAudioSource.timeSamples;
     }
 }

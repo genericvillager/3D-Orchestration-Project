@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,8 +8,16 @@ public class AudioSourceName : MonoBehaviour
 {
     public TMP_Text audioName;
 
+    private AudioSource _audioSource;
+
     private void Start()
     {
-        audioName.text = gameObject.GetComponent<AudioSource>().name;
+        _audioSource = GetComponent<AudioSource>();
+    }
+
+    private void Update()
+    {
+        if(_audioSource.clip != null)
+            audioName.text = _audioSource.clip.name;
     }
 }

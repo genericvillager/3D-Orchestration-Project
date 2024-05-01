@@ -1,81 +1,107 @@
+using System;
 using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class AudioManager : MonoBehaviour
 {
-    public bool isSolo = false;
-    public RoomManager RM;
-    Controls controls;
-    private GameObject playerCamera;
+    public bool isSolo = false; 
+    public RoomManager roomManager;
+    Controls _controls;
 
-    AudioSourceController[] sources;
+    AudioSourceController[] _sources;
+    
+    public int musicSyncTimeSamples = 0;
+
+    private bool on;
+
+    public AudioSource mainAudioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerCamera = GameObject.FindWithTag("MainCamera");
+        SetupControls();
+        mainAudioSource = GetComponent<AudioSource>();
+        mainAudioSource.mute = true;
+
+        StartCoroutine(SyncSources());
+    }
+
+    private void Update()
+    {
+        if(AudioListener.pause)
+            AudioListener.pause = false;
+        
+        else if(!AudioListener.pause)
+            AudioListener.pause = true;
     }
 
     void GetAllAudioSources()
     {
-        sources = FindObjectsOfType<AudioSourceController>();
+        _sources = FindObjectsOfType<AudioSourceController>();
+
+        musicSyncTimeSamples = mainAudioSource.timeSamples;
+        if(mainAudioSource.clip != _sources[0].GetComponent<AudioSource>().clip)
+            mainAudioSource.clip = _sources[0].GetComponent<AudioSource>().clip;
+
+        mainAudioSource.timeSamples = musicSyncTimeSamples;
     }
 
     void SetupControls()
     {
-        controls = new Controls();
-        controls.Enable();
+        _controls = new Controls();
+        _controls.Enable();
 
-        controls.Room.EnvironmentControl.performed += ctx => ChangeEnv(ctx);
-        controls.Room.PauseToggle.performed += ctx => TogglePauseMusic(ctx);
-        controls.Room.Interact.performed += ctx => Interact(ctx);
+        _controls.Room.EnvironmentControl.performed += ctx => ChangeEnv(ctx);
+        _controls.Room.PauseToggle.performed += ctx => TogglePauseMusic();
+        _controls.Room.Interact.performed += ctx => Interact(ctx);
     }
     void ChangeEnv(InputAction.CallbackContext context)
     {
-        RM.CycleEnv();
+        roomManager.CycleEnv();
     }
 
-    void TogglePauseMusic(InputAction.CallbackContext context)
+    public void TogglePauseMusic()
     {
-        if(AudioListener.pause)
-            AudioListener.pause = false;
-        else
-            AudioListener.pause = true;
-    }
-
-    public void ToggleSoloAudioSource(AudioSource AS)
-    {
+        if(!on)
+            return;
+        
         GetAllAudioSources();
-        float value;
-        if(isSolo)
+        foreach (AudioSourceController source in _sources)
         {
-            isSolo = false;
-            value = 1;
+            source.ToggleMute(true);
         }
-        else
-        {
-            isSolo = true;
-            value = 0;
-        }
+    }
 
-        foreach (AudioSourceController source in sources)
+    public void ToggleSoloAudioSource(AudioSource audioSource)
+    {
+        if(!on)
+            return;
+        
+        GetAllAudioSources();
+        foreach (AudioSourceController source in _sources)
         {
-            if (source != AS)
+            if (source.gameObject != audioSource.gameObject)
             {
-                source.ChangeAudio(value);
+                source.ToggleMute(true);
             }
         }
         
     }
 
-    public void PlayAll()
+    public void PlayAllFromStart()
     {
+        if(!on)
+            return;
+        mainAudioSource.Stop();
+        mainAudioSource.timeSamples = 0;
+        mainAudioSource.Play();
+        musicSyncTimeSamples = mainAudioSource.timeSamples;
         GetAllAudioSources();
-        print("playing all");
-        foreach (AudioSourceController source in sources)
+        foreach (AudioSourceController source in _sources)
         {
             source.PlayNow();
         }
@@ -83,11 +109,33 @@ public class AudioManager : MonoBehaviour
 
     void Interact(InputAction.CallbackContext context)
     {
-        PlayAll();  
+        PlayAllFromStart();  
     }
-    // Update is called once per frame
-    void Update()
+
+    public void ToggleOnOff()
     {
-        
+        if (on)
+        {
+            on = false;
+        }
+        else
+        {
+            on = true;
+        }
+    }
+    
+    private IEnumerator SyncSources()
+    {
+        while (true)
+        {
+            if (mainAudioSource.timeSamples != 0)
+            {
+                foreach (AudioSourceController audioSourceController in _sources)
+                {
+                    audioSourceController.SynchroniseWithMain();
+                    yield return null;
+                }
+            }
+        }    
     }
 }

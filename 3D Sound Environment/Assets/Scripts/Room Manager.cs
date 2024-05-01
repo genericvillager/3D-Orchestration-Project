@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,8 @@ using UnityEngine.InputSystem;
 public class RoomManager : MonoBehaviour
 {
     private AudioReverbZone ARZ;
+
+    public GameObject audioSourceGameObject;
     
     // Start is called before the first frame update
     void Start()
@@ -23,9 +26,9 @@ public class RoomManager : MonoBehaviour
             
         print(ARZ.reverbPreset);
     }
-    // Update is called once per frame
-    void Update()
+
+    public void InstantiateAudioSourceGameObject()
     {
-        
+        Instantiate(audioSourceGameObject, transform.position + new Vector3(0,0,3),Quaternion.identity);
     }
 }
