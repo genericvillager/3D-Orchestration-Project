@@ -14,6 +14,7 @@ Assets/AssetStoreTools*
 /3D Sound Environment/Builds/
 /3D Sound Environment/Packages/
 /3D Sound Environment/UserSettings/
+/3D Sound Environment/Logs
 
 # Ignore these Oculus files because they store your secret App ID
 Assets/Resources/OvrAvatarSettings.asset
