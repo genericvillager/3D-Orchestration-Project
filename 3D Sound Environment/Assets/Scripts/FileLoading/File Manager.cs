@@ -5,50 +5,61 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.UI;
 using TMPro;
- 
+
 public class FileManager : MonoBehaviour
 {
-    public string FolderName;
-
     private string dirPath;
-
-    public TMP_Text textBox;
-
     private List<string> filesInDir = new List<string>();
-    private void Start()
+    [SerializeField] private GameObject canvasHolder;
+    [SerializeField] private GameObject content;
+    private GameObject currentCanvas;
+
+    public void OpenFileExplorer(Transform parent, string folderType)
     {
-        dirPath = Application.dataPath + "/" +FolderName;
+        currentCanvas = Instantiate(canvasHolder, parent,false);
+        currentCanvas.transform.localPosition = new Vector3(0,1,.3f);
+        currentCanvas.transform.localRotation= Quaternion.Euler(0,180,0);
+        dirPath = Application.dataPath + "/Resources/" + folderType;
         if (!Directory.Exists(dirPath))
         {
-            Directory.CreateDirectory(dirPath); ;
+            Directory.CreateDirectory(dirPath);
         }
-        print(dirPath);
-        FetchFiles();
-        textBox.text = filesInDir[0];
-        print(textBox.text);
-        //EditorUtility.OpenFilePanel("Overwrite with png", dirPath, "png");
+        PopulateCanvasHolder(FetchFiles());
+    }
+    
+    public void CloseFileExplorer()
+    {
+        filesInDir.Clear();
+        Destroy(currentCanvas);
     }
 
-    public string FetchFiles()
+    public List<string> FetchFiles()
     {
         DirectoryInfo d = new DirectoryInfo(dirPath);
-        string files = "";
+        List<string> files = new List<string>();
         int amount = 0;
         foreach (var file in d.GetFiles())
         {
             if (!file.ToString().Contains(".meta"))
             {
-                files += file + "\n";
-                amount++;
                 filesInDir.Add(file.ToString());
             }
         }
-        return files;
+        return filesInDir;
     }
 
-    public void SaveFile()
+    private void PopulateCanvasHolder(List<string> files)
     {
-        
+        foreach (string file in files) 
+        {
+            string[] fileNameSplit = file.Split("\\");
+            string fileName = fileNameSplit[^1];
+            print(fileName);
+           
+            GameObject con = Instantiate(content, currentCanvas.transform.Find("Canvas/Panel/ScrollArea/Content"), false);
+            con.transform.Find("TextBox").GetComponent<TMP_Text>().text = fileName;
+            con.GetComponent<SelectContentScript>().dirPath = file;
+        }
     }
     
 }

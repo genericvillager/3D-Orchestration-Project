@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,22 +6,33 @@ using UnityEngine.InputSystem;
 
 public class AudioManager : MonoBehaviour
 {
+    public bool isSolo = false;
     public RoomManager RM;
     Controls controls;
     private GameObject playerCamera;
-    
+
+    AudioSourceController[] sources;
+
     // Start is called before the first frame update
     void Start()
     {
         playerCamera = GameObject.FindWithTag("MainCamera");
+    }
+
+    void GetAllAudioSources()
+    {
+        sources = FindObjectsOfType<AudioSourceController>();
+    }
+
+    void SetupControls()
+    {
         controls = new Controls();
         controls.Enable();
-        
+
         controls.Room.EnvironmentControl.performed += ctx => ChangeEnv(ctx);
         controls.Room.PauseToggle.performed += ctx => TogglePauseMusic(ctx);
         controls.Room.Interact.performed += ctx => Interact(ctx);
     }
-
     void ChangeEnv(InputAction.CallbackContext context)
     {
         RM.CycleEnv();
@@ -34,23 +46,44 @@ public class AudioManager : MonoBehaviour
             AudioListener.pause = true;
     }
 
-    void Interact(InputAction.CallbackContext context)
+    public void ToggleSoloAudioSource(AudioSource AS)
     {
-        RaycastHit hit;
-        
-        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit))
+        GetAllAudioSources();
+        float value;
+        if(isSolo)
         {
-            switch (hit.transform.tag)
+            isSolo = false;
+            value = 1;
+        }
+        else
+        {
+            isSolo = true;
+            value = 0;
+        }
+
+        foreach (AudioSourceController source in sources)
+        {
+            if (source != AS)
             {
-                case "AudioSource":
-                    hit.transform.gameObject.GetComponent<AudioSourceController>().ToggleMute();
-                    break;
-                
-                default:
-                    break;
+                source.ChangeAudio(value);
             }
         }
-        Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward, Color.red);
+        
+    }
+
+    public void PlayAll()
+    {
+        GetAllAudioSources();
+        print("playing all");
+        foreach (AudioSourceController source in sources)
+        {
+            source.PlayNow();
+        }
+    }
+
+    void Interact(InputAction.CallbackContext context)
+    {
+        PlayAll();  
     }
     // Update is called once per frame
     void Update()

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AudioSourceController : MonoBehaviour
@@ -11,6 +12,8 @@ public class AudioSourceController : MonoBehaviour
     private AudioSource AS;
 
     private AudioReverbFilter ARF;
+
+    private bool isPlaying;
     // Start is called before the first frame update
     void Start()
     { 
@@ -27,43 +30,53 @@ public class AudioSourceController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HitDetect();
+        if(!isPlaying)
+            HitDetect();
     }
 
     void HitDetect()
     {
-        transform.LookAt(player.position + new Vector3(0,1.5f,0));
         RaycastHit hit;
+        Vector3 direction = (player.transform.position - transform.position).normalized;
         // Does the ray intersect any objects excluding the player layer
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, AS.maxDistance))
+        if (Physics.Raycast(transform.position, direction, out hit, AS.maxDistance))
         {
+            Debug.DrawRay(transform.position, direction, Color.green);
             switch (hit.transform.tag)
             {
                 case "Player":
                     ChangeAudio();
                     break;
-                
+
                 case "Crowd":
-                    ChangeAudio(vol:.9f, reverbDelay:.07f);
+                    ChangeAudio(vol: .9f, reverbDelay: .07f);
                     break;
 
                 case "Wall":
                     ChangeAudio(vol: .5f, reverbDelay: .09f, diffusion: 50, decayHFRatio: 1);
                     break;
-                
+
                 default:
-                    Debug.Log("hitting " + hit.transform.tag);
                     break;
             }
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
         }
         else
         {
-            //Debug.Log("hit nothing");
+            Debug.DrawRay(transform.position, direction, Color.yellow);
         }
+        
     }
 
-    void ChangeAudio(float vol = 1, float pitch = 1, float stereoPan = 0,
+    public void SwitchAudioFile(AudioClip clip)
+    {
+        print(clip.name);
+        AS.Stop();
+        AS.clip = clip;
+        if(isPlaying)
+            AS.Play();
+    }
+
+    public void ChangeAudio(float vol = 1, float pitch = 1, float stereoPan = 0,
         float spatialBlend = 1, float reverbZoneMix = 1, float dopplerLevel = 1,
         float spread = 0, float dryLevel = 0, float room = 0,
         float roomHF = 0, float roomLF = 0, float decayTime = 1,
@@ -102,5 +115,11 @@ public class AudioSourceController : MonoBehaviour
             AS.mute = false;
         else
             AS.mute = true;
+    }
+
+    public void PlayNow()
+    {
+        isPlaying = true;
+        AS.Play();
     }
 }
