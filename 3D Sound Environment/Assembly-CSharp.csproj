@@ -56,6 +56,7 @@
     <Compile Include="Assets\input\Controls.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\FirstPersonMovement.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\Jump.cs" />
+    <Compile Include="Assets\addTextToGround.cs" />
     <Compile Include="Assets\SelectContentScript.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\Crouch.cs" />
     <Compile Include="Assets\Scripts\FileLoading\File Manager.cs" />
@@ -729,6 +730,9 @@
     <Reference Include="Meta.VoiceSDK.Mic.Common">
       <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.VoiceSDK.Mic.Common.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="AssistantVoiceCommandCommon">
       <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\AssistantVoiceCommandCommon.dll</HintPath>
     </Reference>
@@ -762,6 +766,9 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
@@ -776,6 +783,9 @@
     </Reference>
     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
       <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
       <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
@@ -849,6 +859,9 @@
     <Reference Include="Meta.Voice.VSDKHub.Editor">
       <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.Voice.VSDKHub.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Meta.WitAi.Editor">
       <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.WitAi.Editor.dll</HintPath>
     </Reference>
@@ -879,14 +892,17 @@
     <Reference Include="Meta.WitAi.TTS.Editor">
       <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.WitAi.TTS.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="meta.xr.mrutilitykit">
+      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\meta.xr.mrutilitykit.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
       <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="meta.xr.mrutilitykit">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\meta.xr.mrutilitykit.dll</HintPath>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
       <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
@@ -983,6 +999,9 @@
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Searcher.Editor">
+      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Meta.WitAi.TTS">
       <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.WitAi.TTS.dll</HintPath>

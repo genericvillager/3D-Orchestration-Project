@@ -40,6 +40,8 @@ public class AudioManager : MonoBehaviour
 
         mainAudioSource.Stop();
         musicSyncTimeSamples = mainAudioSource.timeSamples;
+        if (_sources.Length == 0)
+            return;
         if(mainAudioSource.clip != _sources[0].GetComponent<AudioSource>().clip)
             mainAudioSource.clip = _sources[0].GetComponent<AudioSource>().clip;
 
