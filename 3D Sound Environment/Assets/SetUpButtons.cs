@@ -49,4 +49,10 @@ public class SetUpButtons : MonoBehaviour
             audioFileExplorerOpen= false;
         }
     }
+
+    public void Delete()
+    {
+        audioManager._sources.Remove(audioSourceController);
+        Destroy(gameObject);
+    }
 }

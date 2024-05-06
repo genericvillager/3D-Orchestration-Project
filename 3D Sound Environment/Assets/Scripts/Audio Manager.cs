@@ -2,6 +2,7 @@ using System;
 using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -12,7 +13,7 @@ public class AudioManager : MonoBehaviour
     public RoomManager roomManager;
     Controls _controls;
 
-    AudioSourceController[] _sources;
+    public List<AudioSourceController> _sources;
     
     public int musicSyncTimeSamples = 0;
 
@@ -63,11 +64,11 @@ public class AudioManager : MonoBehaviour
 
     public void GetAllAudioSources()
     {
-        _sources = FindObjectsOfType<AudioSourceController>();
+        _sources = FindObjectsOfType<AudioSourceController>().ToList();
 
         mainAudioSource.Stop();
         musicSyncTimeSamples = mainAudioSource.timeSamples;
-        if (_sources.Length == 0)
+        if (_sources.Count == 0)
             return;
         if(mainAudioSource.clip != _sources[0].GetComponent<AudioSource>().clip)
             mainAudioSource.clip = _sources[0].GetComponent<AudioSource>().clip;
