@@ -46,7 +46,7 @@ public class AudioSourceController : MonoBehaviour
         // Does the ray intersect any objects excluding the player layer
         if (Physics.Raycast(transform.position, direction, out hit, AS.maxDistance))
         {
-            //Debug.DrawRay(transform.position, direction, Color.green);
+            Debug.DrawRay(transform.position, direction, Color.green);
             switch (hit.transform.tag)
             {
                 case "Player":
@@ -67,7 +67,7 @@ public class AudioSourceController : MonoBehaviour
         }
         else
         {
-            //Debug.DrawRay(transform.position, direction, Color.yellow);
+            Debug.DrawRay(transform.position, direction, Color.yellow);
         }
         
     }

@@ -52,7 +52,8 @@ public class SetUpButtons : MonoBehaviour
 
     public void Delete()
     {
-        audioManager._sources.Remove(audioSourceController);
+        if(!transform.CompareTag("Crowd"))
+            audioManager._sources.Remove(audioSourceController);
         Destroy(gameObject);
     }
 }

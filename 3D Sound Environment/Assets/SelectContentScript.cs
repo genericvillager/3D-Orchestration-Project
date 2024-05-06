@@ -4,7 +4,6 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
-using File = OpenCover.Framework.Model.File;
 
 public class SelectContentScript : MonoBehaviour
 {

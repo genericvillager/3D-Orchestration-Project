@@ -61,6 +61,7 @@
     <Compile Include="Assets\addTextToGround.cs" />
     <Compile Include="Assets\SelectContentScript.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\Crouch.cs" />
+    <Compile Include="Assets\attachObjectToGround.cs" />
     <Compile Include="Assets\Scripts\FileLoading\File Manager.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\Zoom.cs" />
     <Compile Include="Assets\Scripts\AudioSourceName.cs" />
