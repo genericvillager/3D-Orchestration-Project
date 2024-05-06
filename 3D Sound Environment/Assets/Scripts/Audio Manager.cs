@@ -19,19 +19,46 @@ public class AudioManager : MonoBehaviour
     public bool on = false;
 
     public AudioSource mainAudioSource;
-
+    private AudioListener _audioListener;
+    public float musicReactionValue;
     // Start is called before the first frame update
     void Start()
     {
         SetupControls();
         mainAudioSource = GetComponent<AudioSource>();
         mainAudioSource.mute = true;
+        _audioListener = FindObjectOfType<AudioListener>();
         GetAllAudioSources();
         ResetAll();
     }
 
     private void Update()
     {
+        if(on)
+            UpdateMusicReaction();
+    }
+
+    void UpdateMusicReaction()
+    {
+        float rms;
+        float dbv;
+        const int QSAMPLES = 128;
+        const float REFVAL = 0.1f;  // RMS for 0 dB
+ 
+        float[] samples = new float[QSAMPLES];
+ 
+        AudioListener.GetOutputData(samples, 0);
+ 
+        float sqrSum = 0.0f;
+ 
+        int i = QSAMPLES; while (i --> 0) {
+ 
+            sqrSum += samples[i] * samples[i];
+        }
+ 
+        rms = Mathf.Sqrt(sqrSum/QSAMPLES); // rms value 0-1
+        dbv = 20.0f*Mathf.Log10(rms/REFVAL); // dB value
+        musicReactionValue = dbv;
     }
 
     public void GetAllAudioSources()

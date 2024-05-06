@@ -46,8 +46,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\FirstPersonAudio.cs" />
+    <Compile Include="Assets\ReactionShaderUpdate.cs" />
     <Compile Include="Assets\ScrollbarController.cs" />
     <Compile Include="Assets\SetUpButtons.cs" />
+    <Compile Include="Assets\Scripts\AudioSpectrum.cs" />
     <Compile Include="Assets\InfoToText.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\GroundCheck.cs" />
     <Compile Include="Assets\Scripts\Room Manager.cs" />
