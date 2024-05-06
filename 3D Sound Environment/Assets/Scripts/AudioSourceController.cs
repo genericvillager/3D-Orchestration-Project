@@ -72,7 +72,7 @@ public class AudioSourceController : MonoBehaviour
         
     }
 
-    public void SwitchAudioFile(AudioClip clip)
+    public void SwitchAudioFile(AudioClip clip, string fileName)
     {
         print(clip.name);
         AS.Stop();
@@ -82,8 +82,7 @@ public class AudioSourceController : MonoBehaviour
             AS.Play();
             SynchroniseWithMain();
         }
-
-        audioName.text = clip.name;
+        audioName.text = fileName;
     }
 
     private void ChangeAudio(float vol = 1, float pitch = 1, float stereoPan = 0,
@@ -145,10 +144,6 @@ public class AudioSourceController : MonoBehaviour
     {
         isPlaying = true;
         AS.Play();
-        if (AS.clip)
-        {
-            audioName.text = AS.clip.name;
-        }
         SynchroniseWithMain();
     }
 

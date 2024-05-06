@@ -4,6 +4,7 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
+using File = OpenCover.Framework.Model.File;
 
 public class SelectContentScript : MonoBehaviour
 {
@@ -27,22 +28,7 @@ public class SelectContentScript : MonoBehaviour
     {
         System.Diagnostics.Process.Start(dirPath);
     }
-
-    public void SwitchAudioFile()
-    {
-        string dirPathFormatted = dirPath;
-        foreach(string extension in extensionList) 
-        {
-            if (dirPath.Contains(extension))
-            {
-                dirPathFormatted = dirPath.Replace(extension, "");
-                break;
-            }
-        }
-        AudioClip AC = Resources.Load<AudioClip>(dirPathFormatted);
-        AudioClip clip = (AudioClip)Resources.Load(dirPath, typeof(AudioClip));
-        transform.root.GetComponent<AudioSourceController>().SwitchAudioFile(clip);
-    }
+    
 
     public void SwitchAudioFileIE()
     {
@@ -61,7 +47,9 @@ public class SelectContentScript : MonoBehaviour
             else
             {
                 AudioClip myClip = DownloadHandlerAudioClip.GetContent(www);
-                transform.root.GetComponent<AudioSourceController>().SwitchAudioFile(myClip);
+                string[] fileNameSplit = dirPath.Split("\\");
+                string fileName = fileNameSplit[^1];
+                transform.root.GetComponent<AudioSourceController>().SwitchAudioFile(myClip,fileName);
             }
         }
     }

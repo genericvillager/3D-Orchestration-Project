@@ -54,7 +54,6 @@ public class FileManager : MonoBehaviour
         {
             string[] fileNameSplit = file.Split("\\");
             string fileName = fileNameSplit[^1];
-            print(fileName);
            
             GameObject con = Instantiate(content, currentCanvas.transform.Find("Canvas/Panel/ScrollArea/Content"), false);
             con.transform.Find("TextBox").GetComponent<TMP_Text>().text = fileName;
