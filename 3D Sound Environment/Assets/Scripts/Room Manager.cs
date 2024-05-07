@@ -10,6 +10,7 @@ public class RoomManager : MonoBehaviour
 
     public GameObject audioSourceGameObject;
     public GameObject crowdGameObject;
+    [SerializeField] private GameObject screenGameObject;
     private AudioManager _audioManager;
     
     // Start is called before the first frame update
@@ -38,6 +39,10 @@ public class RoomManager : MonoBehaviour
     public void InstantiateCrowdGameObject()
     {
         Instantiate(crowdGameObject, transform.position + new Vector3(0,0,3),Quaternion.identity);
-        _audioManager.GetAllAudioSources();
+    }
+    
+    public void InstantiateScreenGameObject()
+    {
+        Instantiate(screenGameObject, transform.position + new Vector3(0,0,3),Quaternion.identity);
     }
 }
