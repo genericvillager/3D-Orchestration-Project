@@ -1,7 +1,6 @@
 # 3D Orchestration Project
 
 **by:**
-
 *Seán Dunne - C21310823*
 
 *Jamie Clarke -*
