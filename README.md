@@ -1,7 +1,9 @@
 # 3D Orchestration Project
 
 **by:**
+
 *Seán Dunne - C21310823*
+
 *Jamie Clarke -*
 
 *Class Group: TU984/3*
@@ -20,7 +22,7 @@ Download this project from our Itch. You can get a link for the game here - [3D 
 
 # How it works
 
-a
+
 
 # List of classes and assets in the project
 
