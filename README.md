@@ -1,9 +1,6 @@
 # 3D Orchestration Project
 
-**by:** 
-*Seán Dunne - C21310823*
-
-*Jamie Clarke -*
+**by:** *Seán Dunne - C21310823* and *Jamie Clarke -*
 
 *Class Group: TU984/3*
 
