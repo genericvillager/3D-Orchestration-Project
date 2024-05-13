@@ -1,4 +1,4 @@
- 3D Orchestration Project
+# 3D Orchestration Project
 
 **by:**
 *Seán Dunne - C21310823*
@@ -16,7 +16,7 @@ For this assignment Jamie and myself (Seán) where tasked with making a 3D sound
 
 # Instructions for use
 
-a
+Download this project from our Itch. You can get a link for the game here - [3D Orchestration Project](https://youtu.be/qWNQUvIk954). Then once you have downloaded the build. Unzip the files into an area that would suit you the user. Then you can run the game exe file which is called 3D Orchestration Project. There will be some basic audio files already included in the project which you can import by using the audio desk and audio sources which you can bring in. If you have your own sound files you would like to bring in please put it into the relevant sound file folder. When you are importing a file into the game you will have to use the import button on the audio source click on the file you wish to use and then hit the import button again to close the UI.
 
 # How it works
 
@@ -108,8 +108,14 @@ Audio Source:
 
 # What we are most proud of in the assignment
 
-a
+I (Seán) am most proud of the feel of this project in VR. It is comfortable to use, doesn't cause motion sickness and is also intuitive to use for people who may have never used VR before. There is also the feeling of the sound when you move around in VR. There is a huge amount of impact when listening to the audio and hear it changing as you move your head around.
+
+I (Jamie)
+
 
 # What we learned
 
-a
+I (Seán) learned how to use and work with the basic features Meta XR All-in-One SDK. I also learned how to implement those features in a way that suited the project I was working on, for example gave the audio sources multiple options in how they can be picked up for ease of use. Messing around and changing implementation of the current Meta XR components allowed this project to have an intuitive feeling for people who have never used VR. Using this package provided by meta has also allowed us to integrate hand tracking into the project so that both controllers or hand tracking can be used.
+
+I (Jamie)
+
