@@ -10,7 +10,7 @@
 
 **Video:**
 
-[![Submission Video](https://drive.google.com/file/d/13_yBFS2up6_f5GjiGcvf7JHOdbvVqdiF/view?usp=sharing)](https://www.youtube.com/watch?v=EF6ugf2otz8)
+[![Submission Video](https://drive.google.com/uc?export=view&id=15JXqvkSZKEFdiygRXBcf3RogmhGAjHss)](https://www.youtube.com/watch?v=EF6ugf2otz8)
 
 # Assignment Brief
 
