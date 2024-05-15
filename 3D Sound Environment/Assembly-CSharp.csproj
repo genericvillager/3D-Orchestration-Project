@@ -46,26 +46,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\FirstPersonAudio.cs" />
-    <Compile Include="Assets\ReactionShaderUpdate.cs" />
-    <Compile Include="Assets\ScrollbarController.cs" />
-    <Compile Include="Assets\SetUpButtons.cs" />
     <Compile Include="Assets\Scripts\AudioSpectrum.cs" />
-    <Compile Include="Assets\InfoToText.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\GroundCheck.cs" />
     <Compile Include="Assets\Scripts\Room Manager.cs" />
     <Compile Include="Assets\Scripts\Audio Manager.cs" />
-    <Compile Include="Assets\RoomReverbPresetToText.cs" />
+    <Compile Include="Assets\Scripts\InfoToText.cs" />
+    <Compile Include="Assets\Scripts\ScrollbarController.cs" />
+    <Compile Include="Assets\Scripts\SelectContentScript.cs" />
     <Compile Include="Assets\input\Controls.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\FirstPersonMovement.cs" />
+    <Compile Include="Assets\Scripts\SetUpButtons.cs" />
+    <Compile Include="Assets\Scripts\addTextToGround.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\Jump.cs" />
-    <Compile Include="Assets\addTextToGround.cs" />
-    <Compile Include="Assets\SelectContentScript.cs" />
+    <Compile Include="Assets\Scripts\ReactionShaderUpdate.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\Crouch.cs" />
-    <Compile Include="Assets\attachObjectToGround.cs" />
+    <Compile Include="Assets\Scripts\RoomReverbPresetToText.cs" />
     <Compile Include="Assets\Scripts\FileLoading\File Manager.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\Zoom.cs" />
     <Compile Include="Assets\Scripts\AudioSourceName.cs" />
     <Compile Include="Assets\Scripts\AudioSourceController.cs" />
+    <Compile Include="Assets\Scripts\attachObjectToGround.cs" />
     <Compile Include="Assets\Scripts\FileLoading\LoadFileToAudioSource.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\FirstPersonLook.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -955,17 +955,17 @@
     <Reference Include="Unity.Timeline">
       <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.InputSystem">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.ProBuilder.Editor">
       <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.InputSystem.ForUI">
-      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.InputSystem.ForUI.dll</HintPath>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Oculus">
       <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.XR.Oculus.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem.ForUI">
+      <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Unity.InputSystem.ForUI.dll</HintPath>
     </Reference>
     <Reference Include="Meta.VoiceSDK.Mic.WebGL">
       <HintPath>F:\Game Design\Unity projects\3D orchestra proj\3D-Orchestration-Project\3D Sound Environment\Library\ScriptAssemblies\Meta.VoiceSDK.Mic.WebGL.dll</HintPath>

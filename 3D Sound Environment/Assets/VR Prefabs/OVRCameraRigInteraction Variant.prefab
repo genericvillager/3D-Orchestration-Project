@@ -566,6 +566,14 @@ PrefabInstance:
       propertyPath: m_CullingMask.m_Bits
       value: 23
       objectReference: {fileID: 0}
+    - target: {fileID: 2483171112401766340, guid: f54012181eacade4ea242c65f804720f, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483171112401766342, guid: f54012181eacade4ea242c65f804720f, type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
     - target: {fileID: 2483171112407822886, guid: f54012181eacade4ea242c65f804720f, type: 3}
       propertyPath: requestBodyTrackingPermissionOnStartup
       value: 0
@@ -580,11 +588,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2514675399181695721, guid: f54012181eacade4ea242c65f804720f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.542
       objectReference: {fileID: 0}
     - target: {fileID: 2514675399181695721, guid: f54012181eacade4ea242c65f804720f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.091
       objectReference: {fileID: 0}
     - target: {fileID: 2514675399181695721, guid: f54012181eacade4ea242c65f804720f, type: 3}
       propertyPath: m_LocalRotation.w
