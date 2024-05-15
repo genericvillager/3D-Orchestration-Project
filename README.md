@@ -10,7 +10,7 @@
 
 **Video:**
 
-[![Submission Video](http://img.youtube.com/vi/qWNQUvIk954/0.jpg)](https://youtu.be/qWNQUvIk954)
+[![Submission Video](https://www.youtube.com/watch?v=EF6ugf2otz8)](https://www.youtube.com/watch?v=EF6ugf2otz8)
 
 # Assignment Brief
 
@@ -112,7 +112,7 @@ Audio Source:
 
 I (Seán) am most proud of the feel of this project in VR. It is comfortable to use, doesn't cause motion sickness and is also intuitive to use for people who may have never used VR before. There is also the feeling of the sound when you move around in VR. There is a huge amount of impact when listening to the audio and hear it changing as you move your head around.
 
-I (Jamie)
+I (Jamie) am most proud of the Audio system I developed in the Engine, although the current build doesn't use its full potential it can dynamically change to its environment, something you can see if you spawn in a crowd member between you and a sound source. it had many bugs and performance issues, but now I can easily add different materials and audio properties to change how the listener hears the sound.
 
 
 # What we learned
