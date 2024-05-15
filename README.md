@@ -10,7 +10,7 @@
 
 **Video:**
 
-[![Submission Video](https://cdn12.picryl.com/photo/2016/12/31/sound-audio-waves-music-084515-1024.jpg)](https://www.youtube.com/watch?v=EF6ugf2otz8)
+[![Submission Video](https://drive.google.com/file/d/13_yBFS2up6_f5GjiGcvf7JHOdbvVqdiF/view?usp=sharing)](https://www.youtube.com/watch?v=EF6ugf2otz8)
 
 # Assignment Brief
 
