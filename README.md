@@ -4,7 +4,7 @@
 
 *Seán Dunne - C21310823*
 
-*Jamie Clarke -*
+*Jamie Clarke - C21364153*
 
 *Class Group: TU984/3*
 
@@ -119,5 +119,5 @@ I (Jamie) am most proud of the Audio system I developed in the Engine, although 
 
 I (Seán) learned how to use and work with the basic features Meta XR All-in-One SDK. I also learned how to implement those features in a way that suited the project I was working on, for example gave the audio sources multiple options in how they can be picked up for ease of use. Messing around and changing implementation of the current Meta XR components allowed this project to have an intuitive feeling for people who have never used VR. Using this package provided by meta has also allowed us to integrate hand tracking into the project so that both controllers or hand tracking can be used.
 
-I (Jamie)
+I (Jamie) learned how to make and build games for VR, it is very different than normal non-VR-games, especially when considering how the player will interact with things. I had to make sure that the main desk and the buttons on the audio sources worked intuitively, and didn't cause more hassle than they needed to. as well another thing I learned is that in VR the body of the player works differently than a capsule, so I needed to alter the code for the audioSources to counter this issue as the ray cast misses the player often
 
