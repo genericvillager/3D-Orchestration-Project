@@ -19,13 +19,14 @@ For this assignment Jamie and myself (Seán) where tasked with making a 3D sound
 # Instructions for use
 
 * Download this project from our Itch.
-* You can get a link for the game here - [3D Orchestration Project](https://jamie-clarke.itch.io/3d-sound-environment).
+* The APK is for direct to oculus but is not currently working as of writing, but will be updated in the future, and the win.zip is the build for windows pc.
+* You can get a link for the game here - 3D Orchestration Project.
 * Once you have downloaded the build, unzip the files into an area that would suit you the user.
 * Run the game exe file which is called 3D Orchestration Project.
 * When you download the project there will be sample sound files already available for you to test out our programme with.
-* Fot sound files you would like to bring in please put it into the relevant sound file folder "3D Sound Environment_Data/Resources/AudioFiles". When you are importing a file into the game you will have to use the import button on the audio source click on the file you wish to use and then hit the import button again to close the UI.
+* For sound files you would like to bring in please put it into the relevant sound file folder "3D Sound Environment_Data/Resources/AudioFiles". When you are importing a file into the game you will have to use the import button on the audio source click on the file you wish to use and then hit the import button again to close the UI.
 * Then press on.
-* Finally play from start and enjoy!!
+* Finally play from start and enjoy!! 
 
 # How it works
 
