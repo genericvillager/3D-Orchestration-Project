@@ -22,7 +22,24 @@ Download this project from our Itch. You can get a link for the game here - [3D 
 
 # How it works
 
+User Perspective:
+1. You start up the program
+2. Add new Audio Source
+3. Select Audio Clip from Resources Folder in Game Folder
+4. Move Audio Source to desired location
+5. repeat steps 2 - 4 until content
+6. press on
+7. play from start and Enjoy!
 
+optionally you can change the room type, make the audio sources go Solo / Mute them individually, move around, or add crowd members to change how the audio sounds when they get in your way.
+
+In the Background:
+
+The audio Sources all have a raycat that shoots towards the player, if it hits anything then it will change its audio properties to reflect whatever the object it hits is. you can also change them while playing and move them around live in order to fine-tune everything live.
+Surfaces have a tag that the audio source recognises and is able to recognise and react accordingly.
+The Desk in the middle can turn the sources on and off, start all sources from the beginning, mute all sources, change the environment, add new audio sources, crowd members and eventually a TV.
+
+The audio sources clips all have to be the same length and sample rate, this is for syncing reasons, they are placed in the *"3D Sound Environment_Data/Resources/AudioFiles"* folder of the Game, these files will become selectable when the change file button is pressed on the audio source.
 
 # List of classes and assets in the project
 
