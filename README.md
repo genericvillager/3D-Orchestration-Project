@@ -35,7 +35,7 @@ optionally you can change the room type, make the audio sources go Solo / Mute t
 
 In the Background:
 
-The audio Sources all have a raycat that shoots towards the player, if it hits anything then it will change its audio properties to reflect whatever the object it hits is. you can also change them while playing and move them around live in order to fine-tune everything live.
+The audio Sources all have a raycast that shoots towards the player, if it hits anything then it will change its audio properties to reflect whatever the object it hits is. you can also change them while playing and move them around live in order to fine-tune everything live.
 Surfaces have a tag that the audio source recognises and is able to recognise and react accordingly.
 The Desk in the middle can turn the sources on and off, start all sources from the beginning, mute all sources, change the environment, add new audio sources, crowd members and eventually a TV.
 
