@@ -10,7 +10,7 @@
 
 **Video:**
 
-[![Submission Video](https://cdn12.picryl.com/photo/2016/12/31/sound-audio-waves-music-084515-1024.jpg)](https://www.youtube.com/watch?v=EF6ugf2otz8)
+[![Submission Video](https://drive.google.com/uc?export=view&id=13_yBFS2up6_f5GjiGcvf7JHOdbvVqdiF)](https://www.youtube.com/watch?v=EF6ugf2otz8)
 
 # Assignment Brief
 
@@ -18,11 +18,36 @@ For this assignment Jamie and myself (Seán) where tasked with making a 3D sound
 
 # Instructions for use
 
-Download this project from our Itch. You can get a link for the game here - [3D Orchestration Project](https://youtu.be/qWNQUvIk954). Then once you have downloaded the build. Unzip the files into an area that would suit you the user. Then you can run the game exe file which is called 3D Orchestration Project. There will be some basic audio files already included in the project which you can import by using the audio desk and audio sources which you can bring in. If you have your own sound files you would like to bring in please put it into the relevant sound file folder. When you are importing a file into the game you will have to use the import button on the audio source click on the file you wish to use and then hit the import button again to close the UI.
+* Download this project from our Itch.
+* The APK is for direct to oculus but is not currently working as of writing, but will be updated in the future, and the win.zip is the build for windows pc.
+* You can get a link for the game here - 3D Orchestration Project.
+* Once you have downloaded the build, unzip the files into an area that would suit you the user.
+* Run the game exe file which is called 3D Orchestration Project.
+* When you download the project there will be sample sound files already available for you to test out our programme with.
+* For sound files you would like to bring in please put it into the relevant sound file folder "3D Sound Environment_Data/Resources/AudioFiles". When you are importing a file into the game you will have to use the import button on the audio source click on the file you wish to use and then hit the import button again to close the UI.
+* Then press on.
+* Finally play from start and enjoy!! 
 
 # How it works
 
+User Perspective:
+1. You start up the program
+2. Add new Audio Source
+3. Select Audio Clip from Resources Folder in Game Folder
+4. Move Audio Source to desired location
+5. repeat steps 2 - 4 until content
+6. press on
+7. play from start and Enjoy!
 
+optionally you can change the room type, make the audio sources go Solo / Mute them individually, move around, or add crowd members to change how the audio sounds when they get in your way.
+
+In the Background:
+
+The audio Sources all have a raycast that shoots towards the player, if it hits anything then it will change its audio properties to reflect whatever the object it hits is. you can also change them while playing and move them around live in order to fine-tune everything live.
+Surfaces have a tag that the audio source recognises and is able to recognise and react accordingly.
+The Desk in the middle can turn the sources on and off, start all sources from the beginning, mute all sources, change the environment, add new audio sources, crowd members and eventually a TV.
+
+The audio sources clips all have to be the same length and sample rate, this is for syncing reasons, they are placed in the *"3D Sound Environment_Data/Resources/AudioFiles"* folder of the Game, these files will become selectable when the change file button is pressed on the audio source.
 
 # List of classes and assets in the project
 
