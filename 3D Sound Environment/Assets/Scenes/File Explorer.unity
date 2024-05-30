@@ -2512,6 +2512,18 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1882136485}
+    - target: {fileID: 3090242044599207002, guid: 2a01fd76748594243b976352a6926a8e, type: 3}
+      propertyPath: m_MaxDistance
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090242044599207002, guid: 2a01fd76748594243b976352a6926a8e, type: 3}
+      propertyPath: m_MinDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090242044599207002, guid: 2a01fd76748594243b976352a6926a8e, type: 3}
+      propertyPath: m_ReverbPreset
+      value: 27
+      objectReference: {fileID: 0}
     - target: {fileID: 3799447310047697206, guid: 2a01fd76748594243b976352a6926a8e, type: 3}
       propertyPath: m_Mesh
       value: 
