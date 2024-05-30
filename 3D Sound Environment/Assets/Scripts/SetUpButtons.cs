@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SetUpButtons : MonoBehaviour
 {
     FileManager fileManager;
     bool audioFileExplorerOpen = false;
+
+    bool audioSourceParametersOpen = false;
 
     AudioManager audioManager;
     AudioSource audioSource;
@@ -18,12 +18,6 @@ public class SetUpButtons : MonoBehaviour
         audioSourceController = GetComponent<AudioSourceController>();
         audioSource = GetComponent<AudioSource>();
         audioManager = FindObjectOfType<AudioManager>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void MuteToggle()
@@ -55,5 +49,19 @@ public class SetUpButtons : MonoBehaviour
         if(!transform.CompareTag("Crowd"))
             audioManager._sources.Remove(audioSourceController);
         Destroy(gameObject);
+    }
+    
+    public void ToggleOpenAudioSourceParameters()
+    {
+        if (!audioSourceParametersOpen)
+        {
+            audioManager.InitAudioSourceParameters(transform);
+            audioSourceParametersOpen = true;
+        }
+        else
+        {
+            audioManager.CloseAudioSourceParameters();
+            audioSourceParametersOpen= false;
+        }
     }
 }

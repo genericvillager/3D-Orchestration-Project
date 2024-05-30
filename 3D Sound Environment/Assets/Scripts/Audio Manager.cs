@@ -22,6 +22,36 @@ public class AudioManager : MonoBehaviour
     public AudioSource mainAudioSource;
     private AudioListener _audioListener;
     public float musicReactionValue;
+    
+    [SerializeField] private GameObject canvasHolder;
+    [SerializeField] private GameObject content;
+    private GameObject currentCanvas;
+
+    private Dictionary<string, Vector2> audioSourceControllerParametersDefault = new Dictionary<string, Vector2>
+    {
+        { "vol", new Vector2(0,1)},
+        { "pitch", new Vector2(-3,3) },
+        { "stereoPan", new Vector2(-1,1) },
+        { "spatialBlend", new Vector2(0,1) },
+        { "reverbZoneMix", new Vector2(0,1.1f) },
+        { "dopplerLevel", new Vector2(0,5) },
+        { "spread", new Vector2(0,360) },
+        { "dryLevel", new Vector2(-10000,0) },
+        { "room", new Vector2(-10000,0) },
+        { "roomHF", new Vector2(-10000,0) },
+        { "roomLF", new Vector2(-10000,0) },
+        { "decayTime", new Vector2(0.01f,20) },
+        { "decayHFRatio", new Vector2(0.01f,2) },
+        { "reflectionsLevel", new Vector2(-10000,1000) },
+        { "reflectionsDelay", new Vector2(0,.3f) },
+        { "reverbLevel", new Vector2(-10000,2000) },
+        { "reverbDelay", new Vector2(0,.1f) },
+        { "hfReference", new Vector2(1000,20000) },
+        { "lfReference", new Vector2(20,1000) },
+        { "diffusion", new Vector2(0,100) },
+        { "density", new Vector2(0,100) }
+    };
+        
     // Start is called before the first frame update
     void Start()
     {
@@ -160,6 +190,35 @@ public class AudioManager : MonoBehaviour
             on = true;
             GetAllAudioSources();
             mainAudioSource.Play();
+        }
+    }
+
+    public void InitAudioSourceParameters(Transform parent)
+    {
+        currentCanvas = Instantiate(canvasHolder, parent,false);
+        currentCanvas.transform.localPosition = new Vector3(0,1,.3f);
+        currentCanvas.transform.localRotation= Quaternion.Euler(0,180,0);
+        
+        
+        
+        PopulateAudioSourceParameters();
+    }
+    
+    public void CloseAudioSourceParameters()
+    {
+        Destroy(currentCanvas);
+    }
+
+    private void PopulateAudioSourceParameters()
+    {
+        foreach (KeyValuePair<string,Vector2> parameter in audioSourceControllerParametersDefault)
+        {
+            AudioSourceParameterSlider con = Instantiate(content, currentCanvas.transform.Find("Canvas/Panel/ScrollArea/Content"),
+                false).GetComponent<AudioSourceParameterSlider>();
+            print(parameter.Key);
+            con.SliderType = parameter.Key;
+            print(parameter.Value);
+            con.ChangeRange(parameter.Value);
         }
     }
 }

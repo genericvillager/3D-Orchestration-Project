@@ -490,7 +490,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4250
+  m_VersionIndex: 4256
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1598,7 +1598,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4250
+  m_VersionIndex: 4256
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2535,7 +2535,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4253
+  m_VersionIndex: 4259
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3301,7 +3301,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4253
+  m_VersionIndex: 4259
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -4240,7 +4240,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4253
+  m_VersionIndex: 4259
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -6576,7 +6576,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3872
+  m_VersionIndex: 3878
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -7224,7 +7224,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4253
+  m_VersionIndex: 4259
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -7831,7 +7831,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4250
+  m_VersionIndex: 4256
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -7968,7 +7968,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5, y: 1, z: 0}
-  m_LocalScale: {x: 0.34479138, y: 0.6645556, z: 0.33744806}
+  m_LocalScale: {x: 0.58249056, y: 1.1227002, z: 0.57008475}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5652576289787622744}
@@ -8009,6 +8009,8 @@ MonoBehaviour:
   on: 0
   mainAudioSource: {fileID: 0}
   musicReactionValue: 0
+  canvasHolder: {fileID: 5201397211676831055, guid: 4fc3d2fece93bba4f84f519a3303a946, type: 3}
+  content: {fileID: 4584506040348777351, guid: ef99351c1aee7414fb80e65ba7065464, type: 3}
 --- !u!114 &4787286521524740613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8031,9 +8033,9 @@ AudioReverbZone:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9089045278712814579}
   m_Enabled: 1
-  m_MinDistance: 10
-  m_MaxDistance: 15
-  m_ReverbPreset: 1
+  m_MinDistance: 5
+  m_MaxDistance: 19
+  m_ReverbPreset: 27
   m_Room: -1000
   m_RoomHF: -100
   m_DecayTime: 1.49
@@ -8683,7 +8685,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4159908494676078565, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4159908494676078565, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode

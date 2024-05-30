@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\FirstPersonAudio.cs" />
     <Compile Include="Assets\Scripts\AudioSpectrum.cs" />
+    <Compile Include="Assets\ResetToDefaultAudioSourceParameters.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\GroundCheck.cs" />
     <Compile Include="Assets\Scripts\Room Manager.cs" />
     <Compile Include="Assets\Scripts\Audio Manager.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Assets\input\Controls.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\FirstPersonMovement.cs" />
     <Compile Include="Assets\Scripts\SetUpButtons.cs" />
+    <Compile Include="Assets\AudioSourceParameterSlider.cs" />
     <Compile Include="Assets\Scripts\addTextToGround.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\Jump.cs" />
     <Compile Include="Assets\Scripts\ReactionShaderUpdate.cs" />
