@@ -1,9 +1,10 @@
 {
   "dependencies": {
     "com.de-panther.webxr": "0.22.0",
-    "com.meta.xr.sdk.all": "62.0.0",
-    "com.meta.xr.sdk.interaction.ovr.samples": "62.0.0",
+    "com.meta.xr.sdk.all": "65.0.0",
+    "com.meta.xr.sdk.interaction.ovr.samples": "65.0.0",
     "com.unity.collab-proxy": "2.2.0",
+    "com.unity.device-simulator.devices": "1.0.0",
     "com.unity.feature.development": "1.0.1",
     "com.unity.inputsystem": "1.7.0",
     "com.unity.probuilder": "5.2.2",

@@ -1,26 +1,28 @@
 using System.Collections;
-using System.Collections.Generic;
 using System.IO;
-using UnityEditor;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.Rendering;
 
 public class SelectContentScript : MonoBehaviour
 {
     public string dirPath;
-
-    [SerializeField] private AudioSourceController audioSourceController;
-    string[] extensionList = { ".wav", ".mp3", ".m4a", ".flac", ".mp4"};
+    public TMP_Text textbox;
+    private AudioSourceController ASC;
+    private FileManager FM;
+    
     // Start is called before the first frame update
     void Start()
     {
-
+        ASC = transform.root.GetComponent<AudioSourceController>();
+        FM = FindObjectOfType<FileManager>();
+        textbox = GetComponent<TMP_Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void OpenFile()
@@ -31,12 +33,19 @@ public class SelectContentScript : MonoBehaviour
 
     public void SwitchAudioFileIE()
     {
-        StartCoroutine(loadFile());
+        // get the file attributes for file or directory
+        FileAttributes attr = File.GetAttributes(dirPath);
+
+//detect whether its a directory or file
+        if ((attr & FileAttributes.Directory) == FileAttributes.Directory)
+            FM.OpenFolder(dirPath);
+        else
+            StartCoroutine(loadAudioFile());
     }
 
-    IEnumerator loadFile()
+    IEnumerator loadAudioFile()
     {
-        using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip("file://" + dirPath, AudioType.WAV))
+        using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip("file://" + dirPath, AudioType.UNKNOWN))
         {
             yield return www.SendWebRequest();
             if (www.result == UnityWebRequest.Result.ConnectionError)
@@ -48,7 +57,7 @@ public class SelectContentScript : MonoBehaviour
                 AudioClip myClip = DownloadHandlerAudioClip.GetContent(www);
                 string[] fileNameSplit = dirPath.Split("\\");
                 string fileName = fileNameSplit[^1];
-                transform.root.GetComponent<AudioSourceController>().SwitchAudioFile(myClip,fileName);
+                ASC.SwitchAudioFile(myClip,fileName);
             }
         }
     }

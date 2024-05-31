@@ -296,6 +296,13 @@ public class AudioSourceController : MonoBehaviour
 
     void SynchroniseWithMain()
     {
-        AS.timeSamples = _audioManager.mainAudioSource.timeSamples;
+        try
+        {
+            AS.timeSamples = _audioManager.mainAudioSource.timeSamples;
+        }
+        catch
+        {
+            print("TimeSamples did not match!");
+        }
     }
 }

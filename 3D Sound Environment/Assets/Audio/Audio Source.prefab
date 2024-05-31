@@ -189,7 +189,6 @@ GameObject:
   - component: {fileID: -1092245891886379645}
   - component: {fileID: 3393841574899529054}
   - component: {fileID: 58565281794636546}
-  - component: {fileID: -4657356555800953845}
   - component: {fileID: 4307052232891987545}
   - component: {fileID: 7081480012079324293}
   - component: {fileID: 882642196584409146}
@@ -210,7 +209,7 @@ Transform:
   m_GameObject: {fileID: 2103825064153764582}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.206, z: 15.65}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -332,6 +331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioName: {fileID: 5723496838178272920}
+  didResetAudioParameters: 0
 --- !u!164 &-6261887008492982078
 AudioReverbFilter:
   m_ObjectHideFlags: 0
@@ -395,6 +395,9 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
+  _rigidbody: {fileID: 882642196584409146}
+  _kinematicWhileSelected: 1
+  _throwWhenUnselected: 1
 --- !u!114 &3393841574899529054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,7 +420,7 @@ MonoBehaviour:
   _useClosestPointAsGrabSource: 0
   _releaseDistance: 0
   _resetGrabOnGrabsUpdated: 1
-  _physicsGrabbable: {fileID: -4657356555800953845}
+  _physicsGrabbable: {fileID: 0}
 --- !u!114 &58565281794636546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,23 +441,8 @@ MonoBehaviour:
   _rigidbody: {fileID: 882642196584409146}
   _grabSource: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
-  _physicsGrabbable: {fileID: -4657356555800953845}
+  _physicsGrabbable: {fileID: 0}
   _movementProvider: {fileID: 0}
---- !u!114 &-4657356555800953845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2103825064153764582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bedaac29a943f844a7074b53c8bdf9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pointable: {fileID: -1092245891886379645}
-  _rigidbody: {fileID: 882642196584409146}
-  _scaleMassWithSize: 1
 --- !u!114 &4307052232891987545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -478,7 +466,7 @@ MonoBehaviour:
   _scoringModifier:
     _positionRotationWeight: 0.8
   _slippiness: 0
-  _supportedGrabTypes: 3
+  _supportedGrabTypes: -1
   _pinchGrabRules:
     _thumbRequirement: 1
     _indexRequirement: 1
@@ -494,7 +482,7 @@ MonoBehaviour:
     _pinkyRequirement: 1
     _unselectMode: 0
   _movementProvider: {fileID: 0}
-  _handAligment: 1
+  _handAligment: 0
   _handGrabPoses: []
 --- !u!114 &7081480012079324293
 MonoBehaviour:
@@ -533,7 +521,7 @@ MonoBehaviour:
     _pinkyRequirement: 1
     _unselectMode: 0
   _movementProvider: {fileID: 0}
-  _handAligment: 1
+  _handAligment: 0
   _handGrabPoses: []
 --- !u!54 &882642196584409146
 Rigidbody:

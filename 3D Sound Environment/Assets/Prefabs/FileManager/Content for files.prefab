@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dirPath: 
-  audioSourceController: {fileID: 0}
+  textbox: {fileID: 4776382307862406347}
 --- !u!1 &7833850583835685646
 GameObject:
   m_ObjectHideFlags: 0
