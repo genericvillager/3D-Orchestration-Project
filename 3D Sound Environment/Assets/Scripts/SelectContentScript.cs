@@ -55,9 +55,7 @@ public class SelectContentScript : MonoBehaviour
             else
             {
                 AudioClip myClip = DownloadHandlerAudioClip.GetContent(www);
-                string[] fileNameSplit = dirPath.Split("\\");
-                string fileName = fileNameSplit[^1];
-                ASC.SwitchAudioFile(myClip,fileName);
+                ASC.SwitchAudioFile(myClip,dirPath);
             }
         }
     }

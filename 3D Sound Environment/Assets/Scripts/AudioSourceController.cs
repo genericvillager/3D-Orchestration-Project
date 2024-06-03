@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UIElements;
 
 public class AudioSourceController : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class AudioSourceController : MonoBehaviour
     private bool isPlaying = false;
     
     public TMP_Text audioName;
+
+    private string dirpath = "";
+
+    public AudioSourceSaveInfo saveInfo;
     
     // Dictionary to map slider types to field names
     private Dictionary<string, string> sliderTypeToProperty = new Dictionary<string, string>
@@ -101,8 +106,38 @@ public class AudioSourceController : MonoBehaviour
         player = GameObject.FindWithTag("Player").transform;
         laserLine = GetComponent<LineRenderer>();
         _audioManager = FindObjectOfType<AudioManager>();
-        
         ResetAudioSourceParameters();
+        
+        SaveInfo();
+    }
+
+    public void SaveInfo()
+    {
+    saveInfo = new AudioSourceSaveInfo(audioName.text,
+        transform.position,
+        transform.rotation.eulerAngles,
+        dirpath,
+        volDefault,
+        pitchDefault,
+        stereoPanDefault,
+        spatialBlendDefault,
+        reverbZoneMixDefault,
+        dopplerLevelDefault,
+        spreadDefault,
+        dryLevelDefault,
+        roomDefault,
+        roomHFDefault,
+        roomLFDefault,
+        decayTimeDefault,
+        decayHFRatioDefault,
+        reflectionsLevelDefault,
+        reflectionsDelayDefault,
+        reverbLevelDefault,
+        reverbDelayDefault,
+        hfReferenceDefault,
+        lfReferenceDefault,
+        diffusionDefault,
+        densityDefault);
     }
 
     public void ResetAudioSourceParameters()
@@ -174,9 +209,11 @@ public class AudioSourceController : MonoBehaviour
         
     }
 
-    public void SwitchAudioFile(AudioClip clip, string fileName)
+    public void SwitchAudioFile(AudioClip clip, string dirPath)
     {
-        print(clip.name);
+        dirpath = dirPath;
+        string[] fileNameSplit = dirPath.Split("\\");
+        string fileName = fileNameSplit[^1];
         AS.Stop();
         AS.clip = clip;
         audioName.text = fileName;
@@ -185,6 +222,7 @@ public class AudioSourceController : MonoBehaviour
             AS.Play();
             SynchroniseWithMain();
         }
+        SaveInfo();
     }
 
     private void ChangeAudio(float vol = 0, float pitch = 0, float stereoPan = 0,
@@ -241,6 +279,8 @@ public class AudioSourceController : MonoBehaviour
         {
             Debug.LogError(sliderType + " is not a valid SliderType");
         }
+        
+        SaveInfo();
     }
 
     public float GetDefaultValue(string sliderType)
@@ -285,6 +325,8 @@ public class AudioSourceController : MonoBehaviour
         AS.mute = false;
         isPlaying = false;
         AS.timeSamples = 0;
+        
+        SaveInfo();
     }
 
     public void PlayNow()
