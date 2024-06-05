@@ -22,7 +22,6 @@ public class ReactionShaderUpdate : MonoBehaviour
         if (Math.Abs(_audioSpectrum.MeanLevels.Average() - val) > 0.001)
         {
             val = _audioSpectrum.MeanLevels.Average();
-            print(val);
             mat.material.SetFloat("_Value", val);
         }
     }

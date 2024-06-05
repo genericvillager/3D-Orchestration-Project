@@ -34,7 +34,6 @@ public class RoomManager : MonoBehaviour
     public void InstantiateAudioSourceGameObject()
     {
         Instantiate(audioSourceGameObject, transform.position + new Vector3(0,0,3),Quaternion.identity);
-        _audioManager.GetAllAudioSources();
     }
     public void InstantiateCrowdGameObject()
     {

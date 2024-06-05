@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -106,9 +107,9 @@ public class AudioSourceController : MonoBehaviour
         player = GameObject.FindWithTag("Player").transform;
         laserLine = GetComponent<LineRenderer>();
         _audioManager = FindObjectOfType<AudioManager>();
-        ResetAudioSourceParameters();
         
-        SaveInfo();
+        _audioManager._sources.Add(this);
+        ResetAudioSourceParameters();
     }
 
     public void SaveInfo()
@@ -222,7 +223,6 @@ public class AudioSourceController : MonoBehaviour
             AS.Play();
             SynchroniseWithMain();
         }
-        SaveInfo();
     }
 
     private void ChangeAudio(float vol = 0, float pitch = 0, float stereoPan = 0,
@@ -280,7 +280,6 @@ public class AudioSourceController : MonoBehaviour
             Debug.LogError(sliderType + " is not a valid SliderType");
         }
         
-        SaveInfo();
     }
 
     public float GetDefaultValue(string sliderType)
@@ -325,8 +324,6 @@ public class AudioSourceController : MonoBehaviour
         AS.mute = false;
         isPlaying = false;
         AS.timeSamples = 0;
-        
-        SaveInfo();
     }
 
     public void PlayNow()
@@ -346,5 +343,10 @@ public class AudioSourceController : MonoBehaviour
         {
             print("TimeSamples did not match!");
         }
+    }
+
+    private void OnDestroy()
+    {
+        _audioManager._sources.Remove(this);
     }
 }

@@ -5,7 +5,12 @@ using UnityEngine;
 using System;
 using System.Linq;
 using System.Reflection;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.InputSystem;
+using UnityEngine.Networking;
 
 public class SaveAndLoadSystem : MonoBehaviour
 {
@@ -35,6 +40,8 @@ public class SaveAndLoadSystem : MonoBehaviour
         int index = 0;
         foreach (AudioSourceController audioSourceController in AM._sources)
         {
+            audioSourceController.SaveInfo();
+            
             index++;
             Dictionary<string, object> result = new Dictionary<string, object>();
 
@@ -60,24 +67,10 @@ public class SaveAndLoadSystem : MonoBehaviour
 
         return dictionary;
     }
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            JSON test = AStoDic();
-            saveJsonObjectToTextFile(test);
-        }
-        
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            JSON test = AStoDic();
-            LoadAudioSources();
-        }
-    }
 
-    private void saveJsonObjectToTextFile(JSON jsonObject)
+    public void saveJsonObjectToTextFile()
     {
+        JSON jsonObject = AStoDic();
         var jsonAsString = jsonObject.CreatePrettyString();
         var writer = new StreamWriter(dirPath+"/testFile");
         writer.WriteLine(jsonAsString);
@@ -93,11 +86,13 @@ public class SaveAndLoadSystem : MonoBehaviour
         return jsonObject;
     }
 
-    public void LoadAudioSources()
+    public async void LoadAudioSources()
     {
+        print("LOADING...");
         JSON saveFile = loadTextFileToJsonObject();
 
         int index = 0;
+        int stage = 0;
         while (true)
         {
             index++;
@@ -107,18 +102,45 @@ public class SaveAndLoadSystem : MonoBehaviour
             }
             else
             {
-                JSON values = saveFile.GetJSON($"audioSource{index}");
+                
+                var values = saveFile.GetJSON($"audioSource{index}");
+                
+                
                 GameObject AS = Instantiate(AudioSourcePrefab);
+                stage++;
+                
                 AudioSourceController ASC = AS.GetComponent<AudioSourceController>();
                 
-                AS.transform.position =ConvertFromString(values.GetString("Position")) ;
-                AS.transform.rotation = Quaternion.Euler(ConvertFromString(values.GetString("Rotation")));
+                AS.transform.position = StringToVector3(values.GetString("Position")) ;
+                stage++;
+                
+                AS.transform.rotation = Quaternion.Euler(StringToVector3(values.GetString("Rotation")));
+                stage++;
+                
+                string path = values.GetString("File");
+                ASC.SwitchAudioFile( await LoadAudioFileAsync(path),path);
+                stage++;
+                
+                int s = 0;
+                foreach (KeyValuePair<string,object> pair in values.AsDictionary())
+                {
+                    if (s == stage)
+                    {
+                        float result;
+                        float.TryParse(pair.Value.ToString(), out result);
+                        ASC.UpdateDefaultValue(result, char.ToLower(pair.Key[0]) + pair.Key.Substring(1));
+                        print(pair.ToString());
+                        stage++;
+                    }
+                    s++;
+                }
+                
             }
         }
+        print("LOADING COMPLETE");
     }
-    Vector3 ConvertFromString(string input)
+    Vector3 StringToVector3(string input)
     {
-        print(input);
         if (input != null)
         {
             input = input.Replace("(", "");
@@ -143,5 +165,29 @@ public class SaveAndLoadSystem : MonoBehaviour
         }
         else
             throw new ArgumentException();
+    }
+    
+    public async Task<AudioClip> LoadAudioFileAsync(string dirPath)
+    {
+        using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip("file://" + dirPath, AudioType.UNKNOWN))
+        {
+            var operation = www.SendWebRequest();
+
+            while (!operation.isDone)
+            {
+                await Task.Yield();
+            }
+
+            if (www.result == UnityWebRequest.Result.ConnectionError)
+            {
+                Debug.LogError(www.error);
+                return null;
+            }
+            else
+            {
+                AudioClip myClip = DownloadHandlerAudioClip.GetContent(www);
+                return myClip;
+            }
+        }
     }
 }

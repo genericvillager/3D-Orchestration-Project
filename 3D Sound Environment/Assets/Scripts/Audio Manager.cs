@@ -59,7 +59,6 @@ public class AudioManager : MonoBehaviour
         mainAudioSource = GetComponent<AudioSource>();
         mainAudioSource.mute = true;
         _audioListener = FindObjectOfType<AudioListener>();
-        GetAllAudioSources();
         ResetAll();
     }
 
@@ -92,18 +91,17 @@ public class AudioManager : MonoBehaviour
         musicReactionValue = dbv;
     }
 
-    public void GetAllAudioSources()
+    public void GetMainAudioSource()
     {
-        _sources = FindObjectsOfType<AudioSourceController>().ToList();
-
+        
         mainAudioSource.Stop();
-        musicSyncTimeSamples = mainAudioSource.timeSamples;
         if (_sources.Count == 0)
             return;
-        if(mainAudioSource.clip != _sources[0].GetComponent<AudioSource>().clip)
-            mainAudioSource.clip = _sources[0].GetComponent<AudioSource>().clip;
 
-        mainAudioSource.timeSamples = musicSyncTimeSamples;
+        mainAudioSource.clip = _sources[0].GetComponent<AudioSource>().clip;
+
+        musicSyncTimeSamples = mainAudioSource.timeSamples;
+
         mainAudioSource.Play();
         mainAudioSource.loop = true;
     }
@@ -187,8 +185,8 @@ public class AudioManager : MonoBehaviour
         }
         else if(!on)
         {
+            GetMainAudioSource();
             on = true;
-            GetAllAudioSources();
             mainAudioSource.Play();
         }
     }
@@ -215,9 +213,7 @@ public class AudioManager : MonoBehaviour
         {
             AudioSourceParameterSlider con = Instantiate(content, currentCanvas.transform.Find("Canvas/Panel/ScrollArea/Content"),
                 false).GetComponent<AudioSourceParameterSlider>();
-            print(parameter.Key);
             con.SliderType = parameter.Key;
-            print(parameter.Value);
             con.ChangeRange(parameter.Value);
         }
     }
