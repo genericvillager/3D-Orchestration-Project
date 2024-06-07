@@ -30,11 +30,11 @@ public class SetUpButtons : MonoBehaviour
         audioManager.ToggleSoloAudioSource(audioSource);
     }
 
-    public void ToggleOpenAudioFileExplorer()
+    public void ToggleOpenFileExplorer(string Folder)
     {
         if (!audioFileExplorerOpen)
         {
-            fileManager.OpenFileExplorer(transform, "AudioFiles");
+            fileManager.OpenFileExplorer(transform, Folder);
             audioFileExplorerOpen = true;
         }
         else

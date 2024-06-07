@@ -6,10 +6,6 @@ using System;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
-using TMPro;
-using Unity.VisualScripting;
-using UnityEngine.InputSystem;
 using UnityEngine.Networking;
 
 public class SaveAndLoadSystem : MonoBehaviour
@@ -68,28 +64,28 @@ public class SaveAndLoadSystem : MonoBehaviour
         return dictionary;
     }
 
-    public void saveJsonObjectToTextFile()
+    public void Save(String name)
     {
         JSON jsonObject = AStoDic();
         var jsonAsString = jsonObject.CreatePrettyString();
-        var writer = new StreamWriter(dirPath+"/testFile");
+        var writer = new StreamWriter(dirPath+FileName+".sav");
         writer.WriteLine(jsonAsString);
         writer.Close();
     }
     
-    private JSON loadTextFileToJsonObject()
+    private JSON loadTextFileToJsonObject(string path)
     {
-        var reader = new StreamReader(dirPath+"/testFile");
+        var reader = new StreamReader(path);
         var jsonAsString = reader.ReadToEnd();
         reader.Close();
         var jsonObject = JSON.ParseString(jsonAsString);
         return jsonObject;
     }
 
-    public async void LoadAudioSources()
+    public async void Load(string filePath)
     {
         print("LOADING...");
-        JSON saveFile = loadTextFileToJsonObject();
+        JSON saveFile = loadTextFileToJsonObject(filePath);
 
         int index = 0;
         int stage = 0;
@@ -139,7 +135,7 @@ public class SaveAndLoadSystem : MonoBehaviour
         }
         print("LOADING COMPLETE");
     }
-    Vector3 StringToVector3(string input)
+    private Vector3 StringToVector3(string input)
     {
         if (input != null)
         {
@@ -167,7 +163,7 @@ public class SaveAndLoadSystem : MonoBehaviour
             throw new ArgumentException();
     }
     
-    public async Task<AudioClip> LoadAudioFileAsync(string dirPath)
+    private async Task<AudioClip> LoadAudioFileAsync(string dirPath)
     {
         using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip("file://" + dirPath, AudioType.UNKNOWN))
         {

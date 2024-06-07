@@ -4581,7 +4581,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4159908494676078565, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4159908494676078565, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4593,11 +4593,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4159908494676078565, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleOpenAudioFileExplorer
+      value: ToggleOpenFileExplorer
       objectReference: {fileID: 0}
     - target: {fileID: 4159908494676078565, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SetUpButtons, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159908494676078565, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159908494676078565, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: AudioFiles
       objectReference: {fileID: 0}
     - target: {fileID: 4159908494676078565, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

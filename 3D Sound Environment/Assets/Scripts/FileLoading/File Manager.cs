@@ -10,14 +10,15 @@ public class FileManager : MonoBehaviour
     [SerializeField] private GameObject canvasHolder;
     [SerializeField] private GameObject content;
     private GameObject currentCanvas;
-
     private List<GameObject> contents = new List<GameObject>();
+    private SaveAndLoadSystem saveLoadSystem;
 
     public void OpenFileExplorer(Transform parent, string folderType)
     {
         currentCanvas = Instantiate(canvasHolder, parent,false);
         currentCanvas.transform.localPosition = new Vector3(0,1,.3f);
-        currentCanvas.transform.localRotation= Quaternion.Euler(0,180,0);
+        if(folderType != "Saves")
+            currentCanvas.transform.localRotation= Quaternion.Euler(0,180,0);
         dirPath = Application.dataPath + "/Resources/" + folderType;
         dirPath =  dirPath.Replace("/", "\\");
         if (!Directory.Exists(dirPath))
@@ -25,6 +26,7 @@ public class FileManager : MonoBehaviour
             Directory.CreateDirectory(dirPath);
         }
         OpenFolder(dirPath);
+        saveLoadSystem = GetComponent<SaveAndLoadSystem>();
     }
     
     public void CloseFileExplorer()
@@ -80,18 +82,21 @@ public class FileManager : MonoBehaviour
 
         print(path);
         print(dirPath);
-        
+
         if (path != dirPath)
         {
             DirectoryInfo parentDir = Directory.GetParent(path);
-            GameObject back = Instantiate(content, currentCanvas.transform.Find("Canvas/Panel/ScrollArea/Content"), false);
+            GameObject back = Instantiate(content, currentCanvas.transform.Find("Canvas/Panel/ScrollArea/Content"),
+                false);
             SelectContentScript conScript = back.GetComponent<SelectContentScript>();
             conScript.textbox.text = "Back";
             conScript.dirPath = parentDir.ToString();
             contents.Add(back);
         }
-
-        
     }
-    
+
+    public void LoadSave(string path)
+    {
+        saveLoadSystem.Load(path);
+    }
 }

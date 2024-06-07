@@ -3,7 +3,6 @@ using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
-using UnityEngine.Rendering;
 
 public class SelectContentScript : MonoBehaviour
 {
@@ -36,13 +35,24 @@ public class SelectContentScript : MonoBehaviour
         // get the file attributes for file or directory
         FileAttributes attr = File.GetAttributes(dirPath);
 
+        
 //detect whether its a directory or file
         if ((attr & FileAttributes.Directory) == FileAttributes.Directory)
             FM.OpenFolder(dirPath);
+        if (Path.GetExtension(dirPath) == ".sav")
+        {
+            
+        }
         else
             StartCoroutine(loadAudioFile());
     }
 
+    void LoadSave()
+    {
+        FM.LoadSave(dirPath);
+    }
+    
+    
     IEnumerator loadAudioFile()
     {
         using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip("file://" + dirPath, AudioType.UNKNOWN))
