@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class AudioManager : MonoBehaviour
 {
     public bool isSolo = false; 
@@ -46,6 +47,8 @@ public class AudioManager : MonoBehaviour
         { "diffusion", new Vector2(0,100) },
         { "density", new Vector2(0,100) }
     };
+
+    private OVRManager _ovrManager;
         
     // Start is called before the first frame update
     void Start()
@@ -55,7 +58,11 @@ public class AudioManager : MonoBehaviour
         mainAudioSource.mute = true;
         _audioListener = FindObjectOfType<AudioListener>();
         ResetAll();
+        
+        _ovrManager = OVRManager.instance;
+
     }
+    
 
     private void Update()
     {
@@ -212,4 +219,6 @@ public class AudioManager : MonoBehaviour
             con.ChangeRange(parameter.Value);
         }
     }
+    
+    
 }
