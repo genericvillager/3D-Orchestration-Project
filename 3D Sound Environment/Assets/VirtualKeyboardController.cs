@@ -17,16 +17,29 @@ public class VirtualKeyboardController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (overlayKeyboard != null)
-            inputText = overlayKeyboard.text;
+        if (Application.platform != RuntimePlatform.WindowsEditor)
+        {
+            print("not windows");
+            if (overlayKeyboard != null)
+                inputText = overlayKeyboard.text;
 
-        if (_inputField.text != inputText)
-            _inputField.text = inputText;
+            if (_inputField.text != inputText)
+                _inputField.text = inputText;
+        }
     }
 
     public void OnSelect()
     {
-        overlayKeyboard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default);
+        
+        if (Application.platform == RuntimePlatform.WindowsEditor)
+        {
+            //System.Diagnostics.Process.Start("osk.exe");
+            _inputField.ActivateInputField();
+        }
+        else
+        {
+            overlayKeyboard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default);
+        }
     }
 
     public void DeSelect()

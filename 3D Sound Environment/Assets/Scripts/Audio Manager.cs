@@ -113,9 +113,11 @@ public class AudioManager : MonoBehaviour
         _controls = new Controls();
         _controls.Enable();
 
+        /*
         _controls.Room.EnvironmentControl.performed += ctx => ChangeEnv(ctx);
         _controls.Room.PauseToggle.performed += ctx => TogglePauseMusic();
         _controls.Room.Interact.performed += ctx => Interact(ctx);
+        */
     }
     void ChangeEnv(InputAction.CallbackContext context)
     {

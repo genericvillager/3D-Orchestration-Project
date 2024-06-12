@@ -53,6 +53,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Click"",
+                    ""type"": ""Button"",
+                    ""id"": ""e42034cb-b2f8-458e-a6dd-84093af62178"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -110,6 +119,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ef65488a-ff44-43ed-80d5-0430a0cbecd4"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -121,6 +141,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Room_EnvironmentControl = m_Room.FindAction("EnvironmentControl", throwIfNotFound: true);
         m_Room_PauseToggle = m_Room.FindAction("Pause Toggle", throwIfNotFound: true);
         m_Room_Interact = m_Room.FindAction("Interact", throwIfNotFound: true);
+        m_Room_Click = m_Room.FindAction("Click", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -185,6 +206,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Room_EnvironmentControl;
     private readonly InputAction m_Room_PauseToggle;
     private readonly InputAction m_Room_Interact;
+    private readonly InputAction m_Room_Click;
     public struct RoomActions
     {
         private @Controls m_Wrapper;
@@ -192,6 +214,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @EnvironmentControl => m_Wrapper.m_Room_EnvironmentControl;
         public InputAction @PauseToggle => m_Wrapper.m_Room_PauseToggle;
         public InputAction @Interact => m_Wrapper.m_Room_Interact;
+        public InputAction @Click => m_Wrapper.m_Room_Click;
         public InputActionMap Get() { return m_Wrapper.m_Room; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -210,6 +233,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
+            @Click.started += instance.OnClick;
+            @Click.performed += instance.OnClick;
+            @Click.canceled += instance.OnClick;
         }
 
         private void UnregisterCallbacks(IRoomActions instance)
@@ -223,6 +249,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
+            @Click.started -= instance.OnClick;
+            @Click.performed -= instance.OnClick;
+            @Click.canceled -= instance.OnClick;
         }
 
         public void RemoveCallbacks(IRoomActions instance)
@@ -245,5 +274,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnEnvironmentControl(InputAction.CallbackContext context);
         void OnPauseToggle(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnClick(InputAction.CallbackContext context);
     }
 }
