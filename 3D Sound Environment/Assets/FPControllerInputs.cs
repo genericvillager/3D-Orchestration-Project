@@ -1,5 +1,8 @@
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
@@ -38,11 +41,13 @@ public class FPControllerInputs : MonoBehaviour
 
     void click(InputAction.CallbackContext ctx)
     {
+        
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit))
+        
+        if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity))
         {
+            Debug.DrawRay(ray.origin,ray.direction * hit.distance,Color.green, 1f);
+            print(hit.transform.gameObject.name);
             // Check if the hit object is a UI element
             if (hit.collider != null)
             {
@@ -51,4 +56,10 @@ public class FPControllerInputs : MonoBehaviour
             }
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        //Gizmos.DrawRay(mainCamera.ScreenPointToRay(Input.mousePosition));
+    }
 }
+
