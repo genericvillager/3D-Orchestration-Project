@@ -58,6 +58,7 @@
     <Compile Include="Assets\TotalJSON\Scripts\JNull.cs" />
     <Compile Include="Assets\TotalJSON\Internal\CreateStringRunner.cs" />
     <Compile Include="Assets\TotalJSON\Scripts\JValue.cs" />
+    <Compile Include="Assets\FPControllerGrabable.cs" />
     <Compile Include="Assets\TotalJSON\Scripts\JArray.cs" />
     <Compile Include="Assets\Scripts\Audio Manager.cs" />
     <Compile Include="Assets\Scripts\InfoToText.cs" />

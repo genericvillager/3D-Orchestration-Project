@@ -785,6 +785,7 @@ GameObject:
   - component: {fileID: 6892577463156138524}
   - component: {fileID: 1493657904415609985}
   - component: {fileID: 1458972408661149172}
+  - component: {fileID: 8705050249792116718}
   m_Layer: 0
   m_Name: Canvas Holder for files
   m_TagString: Untagged
@@ -1071,6 +1072,18 @@ MonoBehaviour:
   amountOfFiles: 0
   padMin: 200
   padMax: 200
+--- !u!114 &8705050249792116718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6461318525169161770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a37a311eeab364b894894b08ac2870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7927465258974553869
 GameObject:
   m_ObjectHideFlags: 0

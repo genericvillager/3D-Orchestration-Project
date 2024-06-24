@@ -201,8 +201,6 @@ public class AudioManager : MonoBehaviour
         currentCanvas.transform.localPosition = new Vector3(0,1,.3f);
         currentCanvas.transform.localRotation= Quaternion.Euler(0,180,0);
         
-        
-        
         PopulateAudioSourceParameters();
     }
     

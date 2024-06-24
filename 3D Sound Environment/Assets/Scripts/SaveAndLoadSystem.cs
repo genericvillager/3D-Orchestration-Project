@@ -66,9 +66,11 @@ public class SaveAndLoadSystem : MonoBehaviour
 
     public void Save(String name)
     {
+        FileName = "/" + name;
         JSON jsonObject = AStoDic();
         var jsonAsString = jsonObject.CreatePrettyString();
         var writer = new StreamWriter(dirPath+FileName+".sav");
+        print("saving at: " + dirPath+FileName+".sav");
         writer.WriteLine(jsonAsString);
         writer.Close();
     }

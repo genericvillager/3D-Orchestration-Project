@@ -12,6 +12,7 @@ public class AudioSourceParameterSlider : MonoBehaviour
     [SerializeField] private TMP_Text valueText;
 
     private Slider _slider;
+    private BoxCollider _boxCollider;
     
     // Start is called before the first frame update
     void Awake()
@@ -20,6 +21,9 @@ public class AudioSourceParameterSlider : MonoBehaviour
         ASC = root.gameObject.GetComponent<AudioSourceController>();
         text.text = SliderType;
         _slider = GetComponent<Slider>();
+
+        _boxCollider = gameObject.AddComponent<BoxCollider>();
+        _boxCollider.size = new Vector3(100, 100, 1);
     }
 
     // Update is called once per frame

@@ -10,6 +10,7 @@ public class SelectContentScript : MonoBehaviour
     public TMP_Text textbox;
     private AudioSourceController ASC;
     private FileManager FM;
+    private BoxCollider _boxCollider;
     
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,9 @@ public class SelectContentScript : MonoBehaviour
         ASC = transform.root.GetComponent<AudioSourceController>();
         FM = FindObjectOfType<FileManager>();
         textbox = GetComponent<TMP_Text>();
+
+        _boxCollider = gameObject.AddComponent<BoxCollider>();
+        _boxCollider.size = new Vector3(100, 100, 1);
     }
 
     // Update is called once per frame

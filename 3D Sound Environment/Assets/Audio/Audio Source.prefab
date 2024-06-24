@@ -193,6 +193,7 @@ GameObject:
   - component: {fileID: 7081480012079324293}
   - component: {fileID: 882642196584409146}
   - component: {fileID: 5557466036694291722}
+  - component: {fileID: 290476545593692307}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: AudioSource
@@ -560,6 +561,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 060d0bf40d9107646bab39eb2cb0efb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &290476545593692307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103825064153764582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a37a311eeab364b894894b08ac2870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3010001758436255851
@@ -4466,6 +4479,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6220367839399299792}
     m_Modifications:
+    - target: {fileID: 2034971101120878494, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2603018441243162394, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0
@@ -4546,6 +4563,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mute
       objectReference: {fileID: 0}
+    - target: {fileID: 7575087596513122393, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123833331787278287, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -4567,6 +4592,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6220367839399299792}
     m_Modifications:
+    - target: {fileID: 2034971101120878494, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2603018441243162394, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0
@@ -4655,6 +4684,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Change Audio Source
       objectReference: {fileID: 0}
+    - target: {fileID: 7575087596513122393, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123833331787278287, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -4676,6 +4713,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6220367839399299792}
     m_Modifications:
+    - target: {fileID: 2034971101120878494, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2603018441243162394, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0
@@ -4756,6 +4797,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Delete
       objectReference: {fileID: 0}
+    - target: {fileID: 7575087596513122393, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123833331787278287, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -4777,6 +4826,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6220367839399299792}
     m_Modifications:
+    - target: {fileID: 2034971101120878494, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2603018441243162394, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0
@@ -4858,8 +4911,16 @@ PrefabInstance:
       value: Solo
       objectReference: {fileID: 0}
     - target: {fileID: 7575087596513122393, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7575087596513122393, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123833331787278287, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4882,6 +4943,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6220367839399299792}
     m_Modifications:
+    - target: {fileID: 2034971101120878494, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2603018441243162394, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0
@@ -4961,6 +5026,14 @@ PrefabInstance:
     - target: {fileID: 7575087596513122393, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
       propertyPath: m_Name
       value: Change Audio Source Parameters
+      objectReference: {fileID: 0}
+    - target: {fileID: 7575087596513122393, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123833331787278287, guid: b876ba1b09a3b9249abfe2c28114e28b, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

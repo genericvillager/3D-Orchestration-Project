@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class VirtualKeyboardController : MonoBehaviour
 {
@@ -34,7 +35,7 @@ public class VirtualKeyboardController : MonoBehaviour
         if (Application.platform == RuntimePlatform.WindowsEditor)
         {
             //System.Diagnostics.Process.Start("osk.exe");
-            _inputField.ActivateInputField();
+            //_inputField.ActivateInputField();
         }
         else
         {
@@ -44,6 +45,13 @@ public class VirtualKeyboardController : MonoBehaviour
 
     public void DeSelect()
     {
+        if (Time.timeScale != 1)
+        {
+            Time.timeScale = 1;
+        }
+        _inputField.DeactivateInputField();
+        _inputField.gameObject.SetActive(false);
+        _inputField.gameObject.SetActive(true);
         overlayKeyboard = null;
     }
 }

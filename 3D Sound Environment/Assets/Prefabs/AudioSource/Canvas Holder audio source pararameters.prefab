@@ -926,6 +926,7 @@ GameObject:
   - component: {fileID: 1220405462932267547}
   - component: {fileID: 5180573972029356620}
   - component: {fileID: 680873983379312264}
+  - component: {fileID: 9072130407065779852}
   m_Layer: 0
   m_Name: Canvas Holder audio source pararameters
   m_TagString: Untagged
@@ -1066,6 +1067,9 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
+  _rigidbody: {fileID: 0}
+  _kinematicWhileSelected: 1
+  _throwWhenUnselected: 1
 --- !u!114 &463248727167607046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1224,6 +1228,18 @@ MonoBehaviour:
   amountOfFiles: 0
   padMin: 200
   padMax: 200
+--- !u!114 &9072130407065779852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5201397211676831055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a37a311eeab364b894894b08ac2870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5244282371345476657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,6 +1380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cfc95ca7e0a59a4fb4582d8524d140c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ASC: {fileID: 0}
 --- !u!1 &8041735546421533743
 GameObject:
   m_ObjectHideFlags: 0
