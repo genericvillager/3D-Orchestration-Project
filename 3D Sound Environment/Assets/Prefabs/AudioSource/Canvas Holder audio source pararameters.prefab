@@ -360,6 +360,7 @@ GameObject:
   - component: {fileID: 517211461921493524}
   - component: {fileID: 6449910318609334204}
   - component: {fileID: 1593126628017511199}
+  - component: {fileID: 2158474848233151398}
   m_Layer: 0
   m_Name: Scrollbar
   m_TagString: Untagged
@@ -474,6 +475,27 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!65 &2158474848233151398
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126207644239139727}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 300, y: 20, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2553415783059743707
 GameObject:
   m_ObjectHideFlags: 0

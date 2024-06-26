@@ -10,6 +10,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class FPControllerInputs : MonoBehaviour
 {
@@ -54,35 +55,106 @@ public class FPControllerInputs : MonoBehaviour
             // Check if the hit object is a UI element
             if (hit.collider != null)
             {
-                print(hit.collider.gameObject.name);
                 
-                if (hit.collider.gameObject.GetComponent<TMP_InputField>())
+                //print(hit.collider.gameObject.name);
+                TMP_InputField inputField = hit.collider.gameObject.GetComponent<TMP_InputField>();
+                Slider slider = hit.collider.gameObject.GetComponent<Slider>();
+                Scrollbar scrollbar = hit.collider.gameObject.GetComponent<Scrollbar>();
+                if (inputField)
                 {
-                    InputFieldSelected();
+                    InputFieldSelected(inputField);
                 }
-
-                if (hit.collider.gameObject.name == "Poke Quad")
+                else if (slider)
+                {
+                    SliderSelected(slider, hit.point);
+                }
+                else if (scrollbar)
+                {
+                    ScrollBarSelected(scrollbar,hit.point);
+                }
+                else if (hit.collider.gameObject.name == "Poke Quad")
                 {
                     StartCoroutine(PokeInteractableSelected(hit.collider.gameObject.transform));
                     return;
                 }
-
-                if (hit.collider.gameObject.GetComponent<FPControllerGrabable>())
+                else if (hit.collider.gameObject.GetComponent<FPControllerGrabable>())
                 {
                     TogglePickupAudioSource(hit.collider.gameObject.GetComponent<FPControllerGrabable>());
                 }
-                //print("execute UI element");
-                // If you want to trigger UI events manually, you can use ExecuteEvents
-                ExecuteEvents.Execute(hit.collider.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
             }
         }
     }
 
-    void InputFieldSelected()
+    void InputFieldSelected(TMP_InputField inputField)
     {
-
         Time.timeScale = 0;
+        click(inputField.gameObject);
+    }
 
+    void click(GameObject obj)
+    {
+        ExecuteEvents.Execute(obj, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
+    }
+
+    void SliderSelected(Slider slider, Vector3 hitLocation)
+    {
+        print($"hit slider at {hitLocation}");
+        float sliderValue;
+
+        //set up temp OBJ for measuring
+        GameObject measuringObj = new GameObject();
+        measuringObj.transform.position = hitLocation;
+        measuringObj.transform.SetParent(slider.transform);
+        measuringObj.transform.localPosition = new Vector3(measuringObj.transform.localPosition.x, 0, 0);
+        float distance = Vector3.Distance(measuringObj.gameObject.transform.localPosition, new Vector3(-50f,0f,0f));
+        Destroy(measuringObj);
+        
+        //remap value to allig with click point and set it to slider range
+        float value = Remap(distance, 0, slider.minValue, 100, slider.maxValue);
+        //round the value to 2 decimals
+        sliderValue = Mathf.Round(value * 100.0f) * 0.01f;
+        slider.value = sliderValue;
+        
+        //print("Slider Value: " + sliderValue);
+        click(slider.gameObject);
+    }
+
+    void ScrollBarSelected(Scrollbar scrollbar, Vector3 hitLocation)
+    {
+        float sliderValue;
+
+        //set up temp OBJ for measuring
+        GameObject measuringObj = new GameObject();
+        measuringObj.transform.position = hitLocation;
+        measuringObj.transform.SetParent(scrollbar.transform);
+        measuringObj.transform.localPosition = new Vector3(measuringObj.transform.localPosition.x, 0, 0);
+        float distance = Vector3.Distance(measuringObj.gameObject.transform.localPosition, new Vector3(-150f,0f,0f));
+        Destroy(measuringObj);
+        
+        //remap value to allig with click point and set it to slider range
+        float value = Remap(distance, 0, 0, 100, scrollbar.size);
+        //round the value to 2 decimals
+        sliderValue = Mathf.Round(value * 100.0f) * 0.01f;
+        scrollbar.value = sliderValue;
+        
+        //print("Slider Value: " + sliderValue);
+        click(scrollbar.gameObject);
+    }
+
+    private static float Remap(float value, float from1, float to1, float from2, float to2)
+    {
+        //print($"value: {value}\nRange from:{from1}:{from2}\nRange to:{to1}:{to2}");
+        float fromAbs = value - from1;
+        float fromMaxAbs = from2 - from1;
+
+        float normal = fromAbs / fromMaxAbs;
+
+        float toMaxAbs = to2 - to1;
+        float toAbs = toMaxAbs * normal;
+
+        float output = toAbs + to1;
+        return output;
+        return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
     }
 
     IEnumerator PokeInteractableSelected(Transform pokeQuad)

@@ -80,8 +80,8 @@ public class FileManager : MonoBehaviour
         
         PopulateCanvasHolder(FetchFiles(path));
 
-        print(path);
-        print(dirPath);
+        //print(path);
+        //print(dirPath);
 
         if (path != dirPath)
         {

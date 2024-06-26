@@ -41,8 +41,6 @@ public class FPControllerGrabable : MonoBehaviour
             gameObject.layer = LayerMask.NameToLayer("MovingObjects");
             SetLayerAllChildren(transform, LayerMask.NameToLayer("MovingObjects"));
             
-            
-
         }
 
         else if (following)

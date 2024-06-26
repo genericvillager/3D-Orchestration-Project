@@ -11,11 +11,11 @@ public class SelectContentScript : MonoBehaviour
     private AudioSourceController ASC;
     private FileManager FM;
     private BoxCollider _boxCollider;
+    private SaveAndLoadSystem _saveAndLoadSystem;
     
     // Start is called before the first frame update
     void Start()
     {
-        ASC = transform.root.GetComponent<AudioSourceController>();
         FM = FindObjectOfType<FileManager>();
         textbox = GetComponent<TMP_Text>();
 
@@ -45,10 +45,15 @@ public class SelectContentScript : MonoBehaviour
             FM.OpenFolder(dirPath);
         if (Path.GetExtension(dirPath) == ".sav")
         {
-            
+            _saveAndLoadSystem = transform.root.GetComponent<SaveAndLoadSystem>();
+            _saveAndLoadSystem.Load(dirPath);
         }
         else
+        {
+            ASC = transform.root.GetComponent<AudioSourceController>();
             StartCoroutine(loadAudioFile());
+        }
+            
     }
 
     void LoadSave()

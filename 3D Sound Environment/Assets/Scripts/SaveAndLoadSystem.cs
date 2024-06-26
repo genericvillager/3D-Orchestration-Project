@@ -16,6 +16,10 @@ public class SaveAndLoadSystem : MonoBehaviour
     private AudioManager AM;
     [SerializeField]private GameObject AudioSourcePrefab;
     
+    [SerializeField] private GameObject SaveUI;
+    private GameObject saveUI;
+    [SerializeField] private bool showingSaveUI = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +29,7 @@ public class SaveAndLoadSystem : MonoBehaviour
         {
             Directory.CreateDirectory(dirPath);
         }
-        print(dirPath);
+        //print(dirPath);
         
     }
 
@@ -84,58 +88,16 @@ public class SaveAndLoadSystem : MonoBehaviour
         return jsonObject;
     }
 
-    public async void Load(string filePath)
+    public void Load(string filePath)
     {
-        print("LOADING...");
+        //print("LOADING...");
         JSON saveFile = loadTextFileToJsonObject(filePath);
-
-        int index = 0;
-        int stage = 0;
-        while (true)
-        {
-            index++;
-            if (!saveFile.ContainsKey($"audioSource{index}"))
-            {
-                break;
-            }
-            else
-            {
-                
-                var values = saveFile.GetJSON($"audioSource{index}");
-                
-                
-                GameObject AS = Instantiate(AudioSourcePrefab);
-                stage++;
-                
-                AudioSourceController ASC = AS.GetComponent<AudioSourceController>();
-                
-                AS.transform.position = StringToVector3(values.GetString("Position")) ;
-                stage++;
-                
-                AS.transform.rotation = Quaternion.Euler(StringToVector3(values.GetString("Rotation")));
-                stage++;
-                
-                string path = values.GetString("File");
-                ASC.SwitchAudioFile( await LoadAudioFileAsync(path),path);
-                stage++;
-                
-                int s = 0;
-                foreach (KeyValuePair<string,object> pair in values.AsDictionary())
-                {
-                    if (s == stage)
-                    {
-                        float result;
-                        float.TryParse(pair.Value.ToString(), out result);
-                        ASC.UpdateDefaultValue(result, char.ToLower(pair.Key[0]) + pair.Key.Substring(1));
-                        print(pair.ToString());
-                        stage++;
-                    }
-                    s++;
-                }
-                
-            }
-        }
-        print("LOADING COMPLETE");
+        
+        //Remove and load audioSources
+        RemoveAllCurrentAudioSources();
+        LoadAllAudioSources(saveFile);
+        
+        //print("LOADING COMPLETE");
     }
     private Vector3 StringToVector3(string input)
     {
@@ -185,6 +147,84 @@ public class SaveAndLoadSystem : MonoBehaviour
             {
                 AudioClip myClip = DownloadHandlerAudioClip.GetContent(www);
                 return myClip;
+            }
+        }
+    }
+
+    public void ToggleShowSaveUI()
+    {
+        if (!showingSaveUI)
+        {
+            saveUI = Instantiate(SaveUI);
+            showingSaveUI = true;
+            return;
+        }
+        else
+        {
+            Destroy(saveUI);
+            showingSaveUI = false;
+            return;
+        }
+    }
+
+    private void RemoveAllCurrentAudioSources()
+    {
+        AudioSourceController[] allAudioSources = FindObjectsOfType<AudioSourceController>();
+
+        foreach (AudioSourceController source in allAudioSources)
+        {
+            //print(source.name);
+            Destroy(source.gameObject);
+        }
+
+        allAudioSources = null;
+    }
+    private async void LoadAllAudioSources(JSON saveFile)
+    {
+        int index = 0;
+        int stage = 0;
+        while (true)
+        {
+            index++;
+            if (!saveFile.ContainsKey($"audioSource{index}"))
+            {
+                break;
+            }
+            else
+            {
+                
+                var values = saveFile.GetJSON($"audioSource{index}");
+                
+                
+                GameObject AS = Instantiate(AudioSourcePrefab);
+                stage++;
+                
+                AudioSourceController ASC = AS.GetComponent<AudioSourceController>();
+                
+                AS.transform.position = StringToVector3(values.GetString("Position")) ;
+                stage++;
+                
+                AS.transform.rotation = Quaternion.Euler(StringToVector3(values.GetString("Rotation")));
+                stage++;
+                
+                string path = values.GetString("File");
+                ASC.SwitchAudioFile( await LoadAudioFileAsync(path),path);
+                stage++;
+                
+                int s = 0;
+                foreach (KeyValuePair<string,object> pair in values.AsDictionary())
+                {
+                    if (s == stage)
+                    {
+                        float result;
+                        float.TryParse(pair.Value.ToString(), out result);
+                        ASC.UpdateDefaultValue(result, char.ToLower(pair.Key[0]) + pair.Key.Substring(1));
+                        //print(pair.ToString());
+                        stage++;
+                    }
+                    s++;
+                }
+                
             }
         }
     }

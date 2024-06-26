@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\ReactionShaderUpdate.cs" />
     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JNumberFormatException.cs" />
     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JValueTypeException.cs" />
+    <Compile Include="Assets\SaveButtonSetup.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\Crouch.cs" />
     <Compile Include="Assets\OnMouseClickSelectUI.cs" />
     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\DeserializeException.cs" />

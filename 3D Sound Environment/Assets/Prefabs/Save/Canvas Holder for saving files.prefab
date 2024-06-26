@@ -993,8 +993,9 @@ GameObject:
   - component: {fileID: 638752261676285413}
   - component: {fileID: 4102759407495278470}
   - component: {fileID: 8715699153425606365}
+  - component: {fileID: 5744048987023768766}
   m_Layer: 0
-  m_Name: Canvas Holder for files
+  m_Name: Canvas Holder for saving files
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1291,9 +1292,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee83e5a98d979744bbb9f830d03dde7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _saveAndLoadSystem: {fileID: 0}
-  _button: {fileID: 0}
-  _inputField: {fileID: 0}
+--- !u!114 &5744048987023768766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6868614857109365031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a37a311eeab364b894894b08ac2870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6927040812220282645
 GameObject:
   m_ObjectHideFlags: 0
