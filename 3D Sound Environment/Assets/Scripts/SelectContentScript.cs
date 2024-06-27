@@ -72,8 +72,10 @@ public class SelectContentScript : MonoBehaviour
                 Debug.Log(www.error);
             }
             else
-            {
+            { 
                 AudioClip myClip = DownloadHandlerAudioClip.GetContent(www);
+                
+                print(myClip.name);
                 ASC.SwitchAudioFile(myClip,dirPath);
             }
         }

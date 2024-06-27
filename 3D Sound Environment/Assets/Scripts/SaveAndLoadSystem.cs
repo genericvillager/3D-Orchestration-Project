@@ -20,15 +20,23 @@ public class SaveAndLoadSystem : MonoBehaviour
     private GameObject saveUI;
     [SerializeField] private bool showingSaveUI = false;
     
+    
+    //sample save
+    
+    
+    
+    
     // Start is called before the first frame update
     void Start()
     {
         AM = GetComponent<AudioManager>();
         dirPath = Application.dataPath + "/Resources/Saves";
+        print(dirPath);
         if (!Directory.Exists(dirPath))
         {
             Directory.CreateDirectory(dirPath);
         }
+        //SetupSample();
         //print(dirPath);
         
     }
@@ -227,5 +235,11 @@ public class SaveAndLoadSystem : MonoBehaviour
                 
             }
         }
+    }
+
+    private void SetupSample()
+    {
+        Save("Sample");
+        RemoveAllCurrentAudioSources();
     }
 }

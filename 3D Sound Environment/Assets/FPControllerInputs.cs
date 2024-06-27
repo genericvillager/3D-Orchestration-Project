@@ -1,11 +1,6 @@
-
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using Oculus.Interaction;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -60,6 +55,7 @@ public class FPControllerInputs : MonoBehaviour
                 TMP_InputField inputField = hit.collider.gameObject.GetComponent<TMP_InputField>();
                 Slider slider = hit.collider.gameObject.GetComponent<Slider>();
                 Scrollbar scrollbar = hit.collider.gameObject.GetComponent<Scrollbar>();
+                Button button = hit.collider.gameObject.GetComponent<Button>();
                 if (inputField)
                 {
                     InputFieldSelected(inputField);
@@ -71,6 +67,10 @@ public class FPControllerInputs : MonoBehaviour
                 else if (scrollbar)
                 {
                     ScrollBarSelected(scrollbar,hit.point);
+                }
+                else if (button)
+                {
+                    click(button.gameObject);
                 }
                 else if (hit.collider.gameObject.name == "Poke Quad")
                 {
@@ -128,11 +128,12 @@ public class FPControllerInputs : MonoBehaviour
         measuringObj.transform.position = hitLocation;
         measuringObj.transform.SetParent(scrollbar.transform);
         measuringObj.transform.localPosition = new Vector3(measuringObj.transform.localPosition.x, 0, 0);
-        float distance = Vector3.Distance(measuringObj.gameObject.transform.localPosition, new Vector3(-150f,0f,0f));
+        float distance = Vector3.Distance(measuringObj.gameObject.transform.localPosition, new Vector3(-135f,0f,0f));
         Destroy(measuringObj);
         
         //remap value to allig with click point and set it to slider range
-        float value = Remap(distance, 0, 0, 100, scrollbar.size);
+        
+        float value = Remap(distance, 0, 0, 280, 1);
         //round the value to 2 decimals
         sliderValue = Mathf.Round(value * 100.0f) * 0.01f;
         scrollbar.value = sliderValue;
