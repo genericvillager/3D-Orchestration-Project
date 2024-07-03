@@ -62,6 +62,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Escape"",
+                    ""type"": ""Button"",
+                    ""id"": ""8c9ea981-9c63-4ee2-8629-823ef28821d8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -128,6 +137,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eb6b8411-b4ba-416f-96ea-2b1a47a959a2"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Escape"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -230,6 +250,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Room_PauseToggle = m_Room.FindAction("Pause Toggle", throwIfNotFound: true);
         m_Room_Interact = m_Room.FindAction("Interact", throwIfNotFound: true);
         m_Room_Click = m_Room.FindAction("Click", throwIfNotFound: true);
+        m_Room_Escape = m_Room.FindAction("Escape", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Point = m_UI.FindAction("Point", throwIfNotFound: true);
@@ -301,6 +322,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Room_PauseToggle;
     private readonly InputAction m_Room_Interact;
     private readonly InputAction m_Room_Click;
+    private readonly InputAction m_Room_Escape;
     public struct RoomActions
     {
         private @Controls m_Wrapper;
@@ -309,6 +331,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @PauseToggle => m_Wrapper.m_Room_PauseToggle;
         public InputAction @Interact => m_Wrapper.m_Room_Interact;
         public InputAction @Click => m_Wrapper.m_Room_Click;
+        public InputAction @Escape => m_Wrapper.m_Room_Escape;
         public InputActionMap Get() { return m_Wrapper.m_Room; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -330,6 +353,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Click.started += instance.OnClick;
             @Click.performed += instance.OnClick;
             @Click.canceled += instance.OnClick;
+            @Escape.started += instance.OnEscape;
+            @Escape.performed += instance.OnEscape;
+            @Escape.canceled += instance.OnEscape;
         }
 
         private void UnregisterCallbacks(IRoomActions instance)
@@ -346,6 +372,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Click.started -= instance.OnClick;
             @Click.performed -= instance.OnClick;
             @Click.canceled -= instance.OnClick;
+            @Escape.started -= instance.OnEscape;
+            @Escape.performed -= instance.OnEscape;
+            @Escape.canceled -= instance.OnEscape;
         }
 
         public void RemoveCallbacks(IRoomActions instance)
@@ -439,6 +468,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnPauseToggle(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnClick(InputAction.CallbackContext context);
+        void OnEscape(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

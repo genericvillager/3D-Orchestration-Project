@@ -12,31 +12,35 @@ public class FPControllerInputs : MonoBehaviour
     private Controls _controls;
 
     private Camera mainCamera;
+
+    private FirstPersonLook fpsLook;
+
+    [SerializeField] private GameObject menu;
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = Camera.main;
         _controls = new Controls();
         _controls.Enable();
-        _controls.Room.Interact.performed += ctx => Interact(ctx);
+        _controls.Room.Escape.performed += ctx => Quit(ctx);
         _controls.Room.Click.performed += ctx => click(ctx);
+        fpsLook = FindObjectOfType<FirstPersonLook>();
     }
 
-    void Interact(InputAction.CallbackContext ctx)
+    void Quit(InputAction.CallbackContext ctx)
     {
- 
-        /* Toggle cursor lock state
-        if (Cursor.lockState == CursorLockMode.None)
+        if (menu.activeSelf)
         {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            fpsLook.sensitivity = 1;
+            Time.timeScale = 1;
+            menu.SetActive(false);
         }
-        else
+        else if (!menu.activeSelf)
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            fpsLook.sensitivity = 0;
+            Time.timeScale = 0;
+            menu.SetActive(true);
         }
-        */
     }
 
     void click(InputAction.CallbackContext ctx)
@@ -87,12 +91,21 @@ public class FPControllerInputs : MonoBehaviour
 
     void InputFieldSelected(TMP_InputField inputField)
     {
+        //Debug.Log("InputFieldSelected called");
         Time.timeScale = 0;
         click(inputField.gameObject);
+
+        // Select and activate input field
+        inputField.Select();
+        inputField.ActivateInputField();
+        
+        // Add some logs to track focus
+        //Debug.Log("Is input field focused: " + inputField.isFocused);
     }
 
     void click(GameObject obj)
     {
+        //Debug.Log("Click method called");
         ExecuteEvents.Execute(obj, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
     }
 

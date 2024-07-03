@@ -18,15 +18,14 @@ public class VirtualKeyboardController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Application.platform != RuntimePlatform.WindowsEditor)
-        {
-            print("not windows");
-            if (overlayKeyboard != null)
-                inputText = overlayKeyboard.text;
+#if UNITY_ANDROID
+        print("not windows");
+        if (overlayKeyboard != null)
+            inputText = overlayKeyboard.text;
 
-            if (_inputField.text != inputText)
-                _inputField.text = inputText;
-        }
+        if (_inputField.text != inputText)
+            _inputField.text = inputText;
+#endif
     }
 
     public void OnSelect()
@@ -39,19 +38,21 @@ public class VirtualKeyboardController : MonoBehaviour
         }
         else
         {
+#if UNITY_ANDROID
             overlayKeyboard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default);
+#endif
+            
         }
     }
 
     public void DeSelect()
     {
+        print("Deselect");
         if (Time.timeScale != 1)
         {
             Time.timeScale = 1;
         }
         _inputField.DeactivateInputField();
-        _inputField.gameObject.SetActive(false);
-        _inputField.gameObject.SetActive(true);
         overlayKeyboard = null;
     }
 }

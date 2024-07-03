@@ -59,7 +59,9 @@
     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JArgumentException.cs" />
     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JValueTypeException.cs" />
     <Compile Include="Assets\SaveButtonSetup.cs" />
+    <Compile Include="Assets\Krivodeling\UI\Effects\Blur\Scripts\UIBlur.cs" />
     <Compile Include="Assets\Scripts\AudioSpectrum.cs" />
+    <Compile Include="Assets\Krivodeling\UI\Effects\Blur\Scripts\UIBlurWithCanvasGroup.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\Crouch.cs" />
     <Compile Include="Assets\OnMouseClickSelectUI.cs" />
     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\DeserializeException.cs" />
@@ -86,6 +88,7 @@
     <Compile Include="Assets\TotalJSON\Scripts\JArray.cs" />
     <Compile Include="Assets\Scripts\Audio Manager.cs" />
     <Compile Include="Assets\Scripts\FileLoading\File Manager.cs" />
+    <Compile Include="Assets\Krivodeling\UI\Effects\Blur\Scripts\FlipMode.cs" />
     <Compile Include="Assets\TotalJSON\Internal\StringPointer.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\Zoom.cs" />
     <Compile Include="Assets\Scripts\InfoToText.cs" />
@@ -128,10 +131,12 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Krivodeling\UI\Effects\Blur\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\Krivodeling\UI\Effects\Blur\Shaders\UI Blur.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />

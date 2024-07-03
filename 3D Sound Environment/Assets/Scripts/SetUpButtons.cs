@@ -64,4 +64,9 @@ public class SetUpButtons : MonoBehaviour
             audioSourceParametersOpen= false;
         }
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

@@ -219,6 +219,11 @@ public class AudioManager : MonoBehaviour
             con.ChangeRange(parameter.Value);
         }
     }
+
+    public void ChangeGlobalVolume(float vol)
+    {
+        AudioListener.volume = vol;
+    }
     
     
 }
