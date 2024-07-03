@@ -87,6 +87,7 @@
     <Compile Include="Assets\TotalJSON\Scripts\JString.cs" />
     <Compile Include="Assets\TotalJSON\Scripts\JArray.cs" />
     <Compile Include="Assets\Scripts\Audio Manager.cs" />
+    <Compile Include="Assets\SetVolumeSlider.cs" />
     <Compile Include="Assets\Scripts\FileLoading\File Manager.cs" />
     <Compile Include="Assets\Krivodeling\UI\Effects\Blur\Scripts\FlipMode.cs" />
     <Compile Include="Assets\TotalJSON\Internal\StringPointer.cs" />

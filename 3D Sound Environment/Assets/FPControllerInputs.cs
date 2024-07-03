@@ -25,20 +25,29 @@ public class FPControllerInputs : MonoBehaviour
         _controls.Room.Escape.performed += ctx => Quit(ctx);
         _controls.Room.Click.performed += ctx => click(ctx);
         fpsLook = FindObjectOfType<FirstPersonLook>();
+        
+        Cursor.visible = false;
     }
 
     void Quit(InputAction.CallbackContext ctx)
     {
         if (menu.activeSelf)
         {
+            //exit menu
             fpsLook.sensitivity = 1;
             Time.timeScale = 1;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
             menu.SetActive(false);
+            
         }
         else if (!menu.activeSelf)
         {
+            //enter menu
             fpsLook.sensitivity = 0;
             Time.timeScale = 0;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;
             menu.SetActive(true);
         }
     }
