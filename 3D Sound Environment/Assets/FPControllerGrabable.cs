@@ -25,6 +25,14 @@ public class FPControllerGrabable : MonoBehaviour
             Vector3 rotationSpeed = new Vector3 (Keyboard.current.xKey.isPressed.CompareTo(false), 
                 Keyboard.current.yKey.isPressed.CompareTo(false), Keyboard.current.zKey.isPressed.CompareTo(false));
             transform.Rotate (rotationSpeed);
+
+            float distance = Mouse.current.scroll.value[1];
+            if (distance != 0)
+            {
+                Vector3 pos = transform.position;
+                pos = Vector3.MoveTowards(pos, transform.parent.position, -distance/ 10 * Time.deltaTime);
+                transform.position = pos;
+            }
         }
     }
     
@@ -45,12 +53,14 @@ public class FPControllerGrabable : MonoBehaviour
 
         else if (following)
         {
+            Vector3 pos = transform.position;
             //print("toggled grab off");
             following = false;
             transform.parent = oldParent;
             _boxCollider.enabled = true;
             gameObject.layer = LayerMask.NameToLayer("Default");
             SetLayerAllChildren(transform, LayerMask.NameToLayer("Default"));
+            transform.position = pos;
         }
     }
     

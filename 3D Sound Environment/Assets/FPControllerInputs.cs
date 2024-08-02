@@ -16,6 +16,8 @@ public class FPControllerInputs : MonoBehaviour
     private FirstPersonLook fpsLook;
 
     [SerializeField] private GameObject menu;
+
+    [SerializeField] private FPControllerGrabable objectGrabbed = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,7 +56,13 @@ public class FPControllerInputs : MonoBehaviour
 
     void click(InputAction.CallbackContext ctx)
     {
-        
+        if (objectGrabbed)
+        {
+            TogglePickupAudioSource(objectGrabbed);
+            return;
+        }
+
+
         Ray ray = new Ray(mainCamera.transform.position,mainCamera.transform.forward);
         
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity))
@@ -199,6 +207,12 @@ public class FPControllerInputs : MonoBehaviour
 
     void TogglePickupAudioSource(FPControllerGrabable fpControllerGrabable)
     {
+        print("fire");
+        if (!objectGrabbed)
+            objectGrabbed = fpControllerGrabable;
+        else
+            objectGrabbed = null;
+        
         fpControllerGrabable.ToggleFollow();
     }
 

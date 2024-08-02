@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 882642196584409146}
   - component: {fileID: 5557466036694291722}
   - component: {fileID: 290476545593692307}
+  - component: {fileID: 3126047467418752907}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: AudioSource
@@ -582,6 +583,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6a37a311eeab364b894894b08ac2870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3126047467418752907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103825064153764582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dacffcb4d55c10c42abf90334acfe557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3010001758436255851
